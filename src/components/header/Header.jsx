@@ -12,6 +12,7 @@ import FormSearchProduct from "../FormSearchProduct/FormSearchProduct.jsx";
 import IconEng from "./IconEng.jsx";
 import SetLanguage from "./SetLanguage.jsx";
 import LoginPage from "../../page/Login/LoginPage.jsx";
+import FromSearchMobie from "../FormSearchProductMobie/FromSearchMobie.jsx";
 
 const Header = () => {
   const fiverrPro = [
@@ -195,7 +196,7 @@ const Header = () => {
           <div className="header_logo flex items-center space-x-3">
             {/*   Sử dụng thẻ svg bằng cách tạo ra component chứa thẻ svg và gọi đến component header */}
             <Link to={pathDefault.homePage}>
-              <IconLogoHeader />
+              <IconLogoHeader width={"89px"} height={"27px"} />
             </Link>
             <FormSearchProduct />
           </div>
@@ -268,14 +269,14 @@ const Header = () => {
             <div className="logo_mobie">
               <div className="">
                 <Link>
-                  <IconLogoHeader />
+                  <IconLogoHeader width={"89px"} height={"27px"} />
                 </Link>
               </div>
             </div>
           </div>
-          <div className="search_mobie">
+          <div className="search_mobie mt-3">
             <div className="">
-              <FormSearchProduct />
+              <FromSearchMobie />
             </div>
           </div>
         </div>

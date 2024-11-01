@@ -100,3 +100,35 @@
   margin-left: 120px;
   vertical-align: middle;
 }
+
+.imgX1_mobie {
+  display: none;
+}
+
+.imgLogo_makeIncre_mobie {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+ 
+}
+@media (max-width: 1000px) {
+ 
+}
+@media (max-width: 800px) {
+ 
+}
+@media (max-width: 500px) {
+  .imgX1 {
+    display: none;
+  }
+  .imgX1_mobie {
+    display: block;
+  }
+  .imgLogo_makeIncre {
+    display: none;
+  }
+  .imgLogo_makeIncre_mobie {
+    display: block;
+  }
+}

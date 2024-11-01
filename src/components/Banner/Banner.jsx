@@ -42,7 +42,7 @@ const Banner = () => {
       */}
         {/* <div className="grid grid-cols-9 grid-rows-1 gap-3 env_item py-3">
           <div className="shadow-lg rounded-xl item" style={{ height: "" }}> */}
-        <div className="grid grid-cols-9 my-12 grid-rows-1 gap-3 env_item">
+        <div className="grid grid-cols-3 my-12 grid-rows-1 gap-3 xl:grid-cols-9 env_item">
           <div className="shadow-lg rounded-xl box item" style={{ height: "" }}>
             <Link
               to={pathDefault.listJobsPage}

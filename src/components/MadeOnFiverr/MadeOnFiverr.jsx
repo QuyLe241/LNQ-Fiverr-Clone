@@ -96,7 +96,7 @@ const MadeOnFiverr = () => {
         Made on Fiverr
       </h2>
       {/* layout */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2  gap-3">
         <div className="">
           <div className="items">
             <div className="child_items flex items-end">

@@ -95,7 +95,7 @@ const FromSearchMobie = () => {
     }
   };
   return (
-    <div>
+    <div className="">
       <Dropdown
         menu={{
           items: listJobSuggest,
@@ -109,7 +109,7 @@ const FromSearchMobie = () => {
         >
           <div
             style={{ border: "3px solid" }}
-            className="search w-4/5 ml-5 pl-4 rounded-md border border-gray-400 flex items-center justify-between  "
+            className="search w-4/5 pl-2 rounded-md border border-gray-400 flex items-center justify-between"
           >
             <input
               type="text"

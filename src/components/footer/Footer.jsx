@@ -29,7 +29,7 @@ const Footer = () => {
   return (
     <div className="footer py-6">
       <div className=" container mx-auto px-1">
-        <div className="footer_start pb-5 grid grid-cols-5 grid-rows-1 gap-10">
+        <div className="footer_start pb-5 grid grid-cols-1 sm:grid-cols-5 grid-rows-1 gap-10">
           <div className="footer_item">
             <div className="">
               <h5 className="my-5" style={{ fontWeight: 600 }}>
@@ -227,7 +227,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer_end grid grid-cols-2 grid-rows-1 gap-3 pt-5 space-x-8">
+        <div className="footer_end grid grid-cols-1 md:grid-flow-cols-2 grid-rows-1 gap-3 pt-5 space-x-8">
           <div className="left flex space-x-5">
             <div className="">
               <IconLogoFooter />
@@ -238,7 +238,7 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="right grid grid-cols-2 grid-rows-1 gap-3">
+          <div className="right grid grid-cols-1 md:grid-flow-cols-2 grid-rows-1 gap-3">
             <div className="social flex items-center">
               <ul className="flex space-x-5 items-center social_item">
                 <li>

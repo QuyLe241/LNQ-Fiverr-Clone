@@ -5,8 +5,8 @@ import CarouselIntro from "./CarouselIntro";
 function BannerIntro() {
   return (
     <div>
-      <div className="my-32 colorbg py-8  rounded-lg flex items-center ">
-        <div className=" ml-12 py-7 text-white w-1/2">
+      <div className="my-32 colorbg py-8 rounded-lg flex items-center ">
+        <div className=" ml-12 py-7 text-white w-full lg:w-1/2">
           <ImgFiver />
           <span className="text-6xl custometext">
             New e-Commerce <br />
@@ -28,11 +28,14 @@ function BannerIntro() {
             <li>A budget exceeding $1000</li>
             <li>A desire to get things done, without the hassle</li>
           </ul>
+          <div className="w-full imgX1_mobie">
+            <img className="" src="../../../public/img/X1.png" alt="" />
+          </div>
           <button className="px-5 py-2 bg-orange-600 text-white rounded-md hover:opacity-90">
             Get started
           </button>
         </div>
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2 imgX1">
           <img
             width={650}
             className=""
