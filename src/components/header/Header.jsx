@@ -4,7 +4,7 @@ import logoHeader from "../../assets/svg/logoHeader.svg";
 import IconLogoHeader from "../../icon/IconLogoHeader";
 import { pathDefault } from "../../common/path.js";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
-import { Dropdown, Space, Button, Modal } from "antd";
+import { Dropdown, Space, Button, Modal, Drawer } from "antd";
 // import { Button, Modal } from 'antd';
 import "./header.scss";
 import LinkCustom from "../LinkCustom/LinkCustom.jsx";
@@ -13,6 +13,7 @@ import IconEng from "./IconEng.jsx";
 import SetLanguage from "./SetLanguage.jsx";
 import LoginPage from "../../page/Login/LoginPage.jsx";
 import FromSearchMobie from "../FormSearchProductMobie/FromSearchMobie.jsx";
+import DrawerMobie from "./Drawer/DrawerMobie.jsx";
 
 const Header = () => {
   const fiverrPro = [
@@ -185,6 +186,9 @@ const Header = () => {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
+  //  mobie
+
   return (
     //    chỉnh container tại file configTailwind
     <header className="py-5 env_header" style={{ zIndex: "999" }}>
@@ -265,13 +269,16 @@ const Header = () => {
           </nav>
         </div>
         <div className="headerContent_mobie">
-          <div className="">
+          <div className="flex justify-between items-center">
             <div className="logo_mobie">
               <div className="">
-                <Link>
+                <Link to={"/"}>
                   <IconLogoHeader width={"89px"} height={"27px"} />
                 </Link>
               </div>
+            </div>
+            <div className="drawer">
+              <DrawerMobie />
             </div>
           </div>
           <div className="search_mobie mt-3">

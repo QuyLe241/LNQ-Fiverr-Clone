@@ -26,15 +26,17 @@ const ListJobsPage = () => {
         <div className="">
           <div className=""></div>
           <div className="">
-            <h2>List Jobs</h2>
+            <h2 className="" style={{ fontWeight: 700, fontSize: "25px" }}>
+              List Jobs
+            </h2>
           </div>
         </div>
         <div className="list_jobs">
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
             {listJobs.map((item, index) => {
               //   console.log(item);
               return (
-                <div className="my-3 py-2" key={index}>
+                <div className="my-3 py-2 shadow-xl rounded-md" key={index}>
                   <Link to={`${pathDefault.detail}?detail=${item.id}`}>
                     <div className="">
                       <div className="image_jobs">

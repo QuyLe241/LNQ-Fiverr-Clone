@@ -12,7 +12,10 @@ function AwholeWord() {
       </div>
 
       <div className="grid grid-cols-2 xl:grid-flow-cols-4 gap-8 py-5">
-        <div className="space-y-5">
+        <div
+          className="space-y-5"
+          style={{ borderBottom: "#f1e8e8 1px solid" }}
+        >
           <Icon1 />
           <h2 className="text-xl font-medium pb-8">Over 700 categories</h2>
           <p>
@@ -20,7 +23,10 @@ function AwholeWord() {
             for every task, at any <br /> price point.
           </p>
         </div>
-        <div className="space-y-5">
+        <div
+          className="space-y-5"
+          style={{ borderBottom: "#f1e8e8 1px solid" }}
+        >
           <Icon4 />
           <h2 className="text-xl font-medium pb-8">
             Clear, transparent pricing
@@ -30,7 +36,10 @@ function AwholeWord() {
             released when you <br /> approve.
           </p>
         </div>
-        <div className="space-y-5">
+        <div
+          className="space-y-5"
+          style={{ borderBottom: "#f1e8e8 1px solid" }}
+        >
           <Icon3 />
           <h2 className="text-xl font-medium pb-8">Quality work done faster</h2>
           <p>
@@ -38,7 +47,10 @@ function AwholeWord() {
             work delivered in no time, <br /> every time.
           </p>
         </div>
-        <div className="space-y-5">
+        <div
+          className="space-y-5"
+          style={{ borderBottom: "#f1e8e8 1px solid" }}
+        >
           <Icon2 />
           <h2 className="text-xl font-medium pb-8">
             24/7 award-winning support

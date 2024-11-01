@@ -227,7 +227,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer_end grid grid-cols-1 md:grid-flow-cols-2 grid-rows-1 gap-3 pt-5 space-x-8">
+        <div className="footer_end grid grid-cols-1 md:grid-cols-2 grid-rows-1 gap-3 pt-5 space-x-8">
           <div className="left flex space-x-5">
             <div className="">
               <IconLogoFooter />
@@ -238,9 +238,9 @@ const Footer = () => {
               </span>
             </div>
           </div>
-          <div className="right grid grid-cols-1 md:grid-flow-cols-2 grid-rows-1 gap-3">
+          <div className="right grid grid-cols-1 md:grid-cols-2 grid-rows-1 space-x-2">
             <div className="social flex items-center">
-              <ul className="flex space-x-5 items-center social_item">
+              <ul className="flex space-x-3 items-center social_item">
                 <li>
                   <a href="">
                     <IconTiktok />
@@ -273,7 +273,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="space-x-3 flex items-center setting">
+            <div className="space-x-2 flex items-center setting">
               <button onClick={showModal}>
                 {" "}
                 <i class="fa-solid fa-globe"></i>

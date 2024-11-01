@@ -29,12 +29,12 @@ const ListJobPage = () => {
   //    Tạo hàm function riêng để rander, tiện cho việc bảo trì code sau này
   const handleRender = () => {
     return (
-      <div className="container my-5 mx-auto px-2 grid grid-cols-4 gap-5">
+      <div className="container my-5 mx-auto px-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
         {/*  */}
         {listJob.map((item, index) => {
           // console.log(item);
           return (
-            <div className="" key={index}>
+            <div className="rounded-md shadow-xl" key={index}>
               <Link to={`${pathDefault.detail}?detail=${item.id}`}>
                 <img
                   className="w-full rounded-lg"
