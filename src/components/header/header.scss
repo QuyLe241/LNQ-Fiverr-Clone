@@ -10,7 +10,6 @@ header .ant-dropdown-trigger svg {
 .env_header {
     border-bottom: 1px solid rgb(236, 227, 227);
     background-color: white;
-    
     position: sticky;
     top: 0;
 
@@ -72,10 +71,17 @@ header .ant-dropdown-trigger svg {
     // opacity: 0.8;
 }
 
+.headerContent_mobie{
+    display: none;
+}
+
 
 @media (max-width: 1300px) {
-    .header_content .header_navigation {
+    .env_header .container .header_content {
         display: none;
+    }
+    .headerContent_mobie{
+        display: block;
     }
 }
 

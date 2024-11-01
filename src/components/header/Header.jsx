@@ -263,6 +263,22 @@ const Header = () => {
             <Link to={"/"}>Đăng nhập</Link> */}
           </nav>
         </div>
+        <div className="headerContent_mobie">
+          <div className="">
+            <div className="logo_mobie">
+              <div className="">
+                <Link>
+                  <IconLogoHeader />
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="search_mobie">
+            <div className="">
+              <FormSearchProduct />
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );

@@ -1,5 +1,5 @@
       Dự án Fiver React
-      - file phân công việc: https://docs.google.com/spreadsheets/d/1betDEyt7supHr10GwfwBWVIawakpqYWFeLkzBWFMPgo/edit?gid=0#gid=0
+
 
 - Sử dụng vite. node phiên bản v20.11.0
   Các thư viện cài đặt bên trong dự án
