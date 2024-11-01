@@ -1,0 +1,97 @@
+.content_img{
+    overflow: hidden;
+}
+
+.content_img img {
+    transition: all 0.5s ;
+}
+
+.content_img img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+   
+}
+
+.works_it .list .list_decs .number span{
+    padding: 5px 10px;
+    border: 1px #dadbdd solid;
+    border-radius: 50%;
+}
+
+.works_it .list .list_decs .decs_job span{
+    color: #404145;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.works_it .list .list_decs .decs_job p{
+    color: rgb(98, 100, 106);
+}
+
+.container_aboutUser {
+    border: 1px solid #dadbdd;
+}
+
+.title_aboutUser {
+    border-bottom: 1px solid #dadbdd;
+}
+
+.title p {
+    color: #62646a;
+}
+
+.inforUser {
+    border-bottom: 1px solid #dadbdd;
+}
+
+.info_user span {
+    color: rgb(98, 100, 106);
+    font-weight: 600;
+}
+
+.info_user p {
+    color: #62646a;
+    font-weight: 700;
+}
+
+.decsShort_job p {
+    color: #62646a;
+}
+
+.title_new span {
+    background-color: #FF62AD;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.decsShort_job {
+    border-bottom: 1px solid #dadbdd;
+}
+
+.among_clients .decs_clients .about_clients span {    
+    font-weight: 600;
+}
+
+.among_clients .decs_clients .about_clients p {    
+    color: #62646a;
+    font-weight: 600;
+}
+
+.works_it  {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .14);
+}
+
+.content_right .sidebar_content {
+    border: 1px rgb(218, 219, 221) solid;
+}
+
+
+.container .content_right .sidebar_content .ant-tabs .ant-tabs-nav .ant-tabs-nav-wrap  {
+    display: flex;
+    justify-content: space-around;
+}
+
+.label_tab {
+    font-size: 16px;
+}

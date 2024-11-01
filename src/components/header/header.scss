@@ -1,0 +1,84 @@
+header .ant-dropdown-open svg {
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+
+header .ant-dropdown-trigger svg {
+    transition: all 0.3s;
+}
+
+.env_header {
+    border-bottom: 1px solid rgb(236, 227, 227);
+    background-color: white;
+    
+    position: sticky;
+    top: 0;
+
+}
+
+.header_content .header_navigation .btn_login:hover {
+    background-color: rgb(104, 226, 104);
+    color: white;
+    transition: all 0.5s;
+}
+
+.header_content .header_navigation .btn_register:hover {
+    background-color: rgb(18, 175, 18);
+    
+    transition: all 0.5s;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: #1dbf73;
+    // background-color: #1dbf73;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-ink-bar{
+    // color: #1dbf73;
+    background-color: #1dbf73;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:hover .ant-tabs-tab-btn{
+    color: #1dbf73;
+    // background-color: #1dbf73;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn{
+    // color: #95979d;
+    font-weight: 600;
+    // background-color: #1dbf73;
+}
+
+.ant-tabs-tab-btn {
+    color: #95979d;
+}
+
+.ant-modal-footer .ant-btn-default {
+    border: #1dbf73 1px solid;
+    color: #1dbf73;
+}
+
+.ant-modal-content .ant-modal-footer .ant-btn-default:hover {
+    border: #33db8c 1px solid;
+    color: #16d079;
+}
+
+.ant-modal-footer .ant-btn-primary {
+    background-color: #1dbf73;
+}
+
+.ant-modal-content .ant-modal-footer .ant-btn-primary:hover {
+    background-color: #3cdd92;
+    // opacity: 0.8;
+}
+
+
+@media (max-width: 1300px) {
+    .header_content .header_navigation {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    
+}

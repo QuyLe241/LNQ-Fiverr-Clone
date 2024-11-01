@@ -1,0 +1,50 @@
+.guides .slide span {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+ .slick-arrow::before {
+    margin: 0 !important;
+    // background-color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    // padding: 1px;
+    // background-color: black;
+    
+}
+
+.slick-next::before {
+    margin: 0 !important;
+    // background-color: white;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+.items {
+    position: relative;
+    // padding: 10px 0;
+    margin: 15px 0;
+}
+
+.items img {
+    width: 100%;
+}
+
+.child_items {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    visibility: hidden;
+    
+}
+
+.items:hover > .child_items {
+    transition: all 0.5s;
+    visibility: visible;
+    background: linear-gradient(180deg, transparent, transparent 37%, rgba(0, 0, 0, .7));;
+}
+
+.items .child_items .child_items_content {
+    padding: 10px;
+}

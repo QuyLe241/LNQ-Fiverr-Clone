@@ -1,0 +1,19 @@
+.env_item .item p {
+    font-weight: 600;
+    margin-top: 12px;
+    padding: 10px 0;
+}
+
+.env_item .item:hover {
+    transition: all 0.5s;
+    background: rgb(29,191,115);
+    background: radial-gradient(circle, rgba(29,191,115,1) 0%, rgba(135,221,181,1) 0%, rgba(255,255,255,1) 80%);
+}
+
+.env_item .item {
+    height: 120px;
+}
+
+.box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}

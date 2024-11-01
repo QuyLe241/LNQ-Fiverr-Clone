@@ -1,0 +1,25 @@
+.container_login {
+    background: rgb(21,138,71);
+    background: linear-gradient(90deg, rgba(21,138,71,1) 0%, rgba(5,76,33,1) 74%, rgba(4,81,54,1) 100%);
+}
+
+.loginPage_content {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.loginPage_form {
+    width: 60%;
+}
+
+@media (max-width: 1000px) {
+    .loginPage_img {
+        display: none;
+    }
+    .loginPage_form {
+        width: 100%;
+    }
+}

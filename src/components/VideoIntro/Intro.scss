@@ -1,0 +1,102 @@
+.text  {
+    list-style-type: disc;
+    margin: 0 0 0 24px;
+}
+
+.slick-arrow::before ,
+.slick-next::before {
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    }
+.slick-arrow::before ,
+.slick-prev::before {
+    margin: 0 100px 0 0;
+}
+.colorbg{
+    background-color: #003912;
+}
+.slick-next::after {
+    font-size: 20px;
+    
+} 
+.slick-arrow.slick-prev {
+    left: -35px; 
+}
+
+.slick-slider .slick-initialized {
+    padding: 0 100px ;
+}
+
+.custometext {
+    line-height: 90px;
+    padding-bottom: 20px;
+    font-size: 46px;
+}
+.custom-modal .ant-modal-close {
+    display: none !important; 
+  }
+  
+  .custom-modal .ant-modal {
+    max-width: 90vw; 
+    width: 80vw; 
+    height: 80vh; 
+  }
+  
+  .custom-modal .ant-modal-content {
+    height: 100%; 
+  }
+  .customeroot{
+    width: 120px;
+    border-left: 1px solid #c5c6c9;
+        vertical-align: middle;
+    margin-left: 15px;
+  }
+  // .fonttext2 {
+  //   font-family: text2 ;
+  //   src: url(../../assets/font/macan-regular\ \(1\).ttf);
+  // }
+  // .fonttest{
+  //   font-family: test;
+  //   src: url(../../assets/font/domaine.ttf);
+  // }
+.contentAboutFiver {
+      color: #74767e;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+.custome i {
+  height: 70vh;
+  width: 100px;
+}
+// sadsa
+.bgImgMake {
+  background-color: #6b280b !important;
+}
+
+.slick-arrow::before {
+  margin: 0 !important;
+  // background-color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  // padding: 1px;
+  // background-color: black;
+  
+}
+
+.slick-next::before {
+  margin: 0 !important;
+  // background-color: white;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.customelave{
+  margin-left: 120px;
+  vertical-align: middle;
+}
+
+.customelave{
+  margin-left: 120px;
+  vertical-align: middle;
+}
