@@ -705,8 +705,6 @@ const DeTailsJobs = () => {
                     <div className="div_infoCreater">
                       <img
                         style={{
-                          // width: "90px",
-                          // height: "90px",
                           borderRadius: "50%",
                         }}
                         src={item.avatar}

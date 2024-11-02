@@ -115,7 +115,7 @@ const FormRegister = () => {
             contentLable={"Họ và Tên"}
             name={"name"}
             placeHolder={"Nhập tên của bạn"}
-            classWrapper={"w-1/2 p-3"}
+            classWrapper={"w-full xl:w-1/2 p-3"}
             value={values.name}
             onBlur={handleBlur}
             onChange={handleChange}
@@ -127,7 +127,7 @@ const FormRegister = () => {
             contentLable={"Email"}
             name={"email"}
             placeHolder={"Nhập email của bạn"}
-            classWrapper={"w-1/2 p-3"}
+            classWrapper={"w-full xl:w-1/2 p-3"}
             value={values.email}
             onBlur={handleBlur}
             onChange={handleChange}

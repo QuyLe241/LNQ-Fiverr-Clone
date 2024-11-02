@@ -377,6 +377,7 @@ const MadeOnFiverr = () => {
             backgroundImage: `url(${GuideBanner})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             height: "276px",
           }}
         >
