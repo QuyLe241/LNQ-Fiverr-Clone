@@ -1,0 +1,23 @@
+
+.ant-dropdown-open svg {
+    transform: rotate(180deg);
+    transition: all 0.3s;
+}
+
+.ant-dropdown-trigger svg {
+    transition: all 0.3s;
+}
+
+.ant-dropdown-trigger:hover {
+    color: rgb(104, 226, 104);
+}
+
+.container_drawer {
+    // color: rgb(98, 100, 106);
+}
+
+.container_drawer .items_drawer {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(98, 100, 106);
+}

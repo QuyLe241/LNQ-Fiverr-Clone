@@ -30,13 +30,13 @@ const ProSerVice = () => {
     <div>
       {/* Banner */}
       <div
-        className="banner_connect  "
+        className="banner_connect"
         style={{
           backgroundColor: "#003912",
-          height: "450px",
+          height: "",
         }}
       >
-        <div className="container mx-auto px-2 flex items-center justify-around py-5">
+        <div className="container mx-auto px-2 flex items-center justify-center py-5">
           <div className="text-white space-y-5">
             <h1>
               <div className="">
@@ -52,14 +52,19 @@ const ProSerVice = () => {
               Fiverr Pro is the place for top-tier, vetted freelancers to <br />{" "}
               advance their careers and access exclusive opportunities.
             </p>
-            <button
-              className="text-black bg-white py-3 px-3 rounded-xl hover:bg-opacity-90"
-              style={{ fontWeight: 600 }}
-            >
-              Submit your application
-            </button>
+            <div className="connectImg_banner_mobie">
+              <img src={connectImg} alt="" />
+            </div>
+            <div className="btn_responsive">
+              <button
+                className="text-black bg-white py-3 px-3 rounded-xl hover:bg-opacity-90"
+                style={{ fontWeight: 600 }}
+              >
+                Submit your application
+              </button>
+            </div>
           </div>
-          <div className="">
+          <div className="connectImg_banner">
             <img src={connectImg} alt="" />
           </div>
         </div>
@@ -213,16 +218,16 @@ const ProSerVice = () => {
             </p>
           </div>
           <div className="flex justify-around mt-6">
-            <div className="w-1/4">
+            <div className="w-full md:w-1/4">
               <img src={processImg1} alt="" />
             </div>
-            <div className="w-1/4">
+            <div className="w-full md:w-1/4">
               <img src={processImg2} alt="" />
             </div>
-            <div className="w-1/4">
+            <div className="w-full md:w-1/4">
               <img src={processImg3} alt="" />
             </div>
-            <div className="w-1/4">
+            <div className="w-full md:w-1/4">
               <img src={processImg4} alt="" />
             </div>
           </div>
@@ -370,12 +375,15 @@ const ProSerVice = () => {
               <Slider className="p-3" {...settings}>
                 <div className=" style_carousel" style={{}}>
                   <div className="flex justify-around items-center">
-                    <div className="">
+                    <div className="hidden md:block">
                       <img src={proStories1} alt="" />
                     </div>
                     <div className="text-center">
                       <p className="name">Alan Redondo</p>
                       <p className="decs">From broke to breaking the bank</p>
+                      <div className="block md:hidden">
+                        <img src={proStories1} alt="" />
+                      </div>
                       <button
                         className="py-2 px-5 rounded-md mt-8 hover:bg-slate-100"
                         style={{ border: "1px solid black", fontWeight: 600 }}
@@ -387,12 +395,15 @@ const ProSerVice = () => {
                 </div>
                 <div className="style_carousel ">
                   <div className="flex justify-around items-center">
-                    <div className="">
+                    <div className="hidden md:block">
                       <img src={proStories2} alt="" />
                     </div>
                     <div className="text-center">
                       <p className="name">Jacqui-Lee Katz</p>
                       <p className="decs">From broke to breaking the bank</p>
+                      <div className="block md:hidden">
+                        <img src={proStories2} alt="" />
+                      </div>
                       <button
                         className="py-2 px-5 rounded-md mt-8 hover:bg-slate-100"
                         style={{ border: "1px solid black", fontWeight: 600 }}
@@ -404,7 +415,7 @@ const ProSerVice = () => {
                 </div>
                 <div className="style_carousel ">
                   <div className="flex justify-around items-center">
-                    <div className="">
+                    <div className="hidden md:block">
                       <img src={proStories3} alt="" />
                     </div>
                     <div className=" text-center">
@@ -412,6 +423,9 @@ const ProSerVice = () => {
                       <p className="decs">
                         Unleashing creativity and building long-term connections
                       </p>
+                      <div className="block md:hidden">
+                        <img src={proStories3} alt="" />
+                      </div>
                       <button
                         className="py-2 px-5 rounded-md mt-8 hover:bg-slate-100"
                         style={{ border: "1px solid black", fontWeight: 600 }}
@@ -429,7 +443,7 @@ const ProSerVice = () => {
 
       {/* Apply  */}
       <div className="" style={{ backgroundColor: "rgba(0, 57, 18, 1)" }}>
-        <div className="container mx-auto px-2" style={{ height: "340px" }}>
+        <div className="container mx-auto px-2" style={{ height: "" }}>
           <div className="text-center">
             <p
               className="text-white py-3"
@@ -446,6 +460,7 @@ const ProSerVice = () => {
               Apply
             </button>
           </div>
+          <div className="py-3"></div>
         </div>
       </div>
     </div>

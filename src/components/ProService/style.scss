@@ -17,3 +17,26 @@
     color: #222325;
     font-weight: 600;
 }
+
+.connectImg_banner_mobie {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .banner_connect {
+        // height: 600px;
+    }
+}
+
+@media (max-width: 500px) {
+    .connectImg_banner {
+        display: none;
+    }
+    .connectImg_banner_mobie {
+        display: block;
+    }
+    .btn_responsive {
+        display: flex;
+        justify-content: center;
+    }
+}
