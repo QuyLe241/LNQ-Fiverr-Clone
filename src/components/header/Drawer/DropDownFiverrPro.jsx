@@ -9,7 +9,7 @@ const DropDownFiverrPro = () => {
   const items = [
     {
       label: (
-        <div className="">
+        <div className="py-2 px-2" style={{ fontSize: "20px" }}>
           <Link to={pathDefault.proService}>Pro services</Link>
         </div>
       ),
@@ -17,7 +17,7 @@ const DropDownFiverrPro = () => {
     },
     {
       label: (
-        <div className="">
+        <div className="py-2 mx-2" style={{ fontSize: "20px" }}>
           <Link to={pathDefault.proService}>Looking hire</Link>
         </div>
       ),

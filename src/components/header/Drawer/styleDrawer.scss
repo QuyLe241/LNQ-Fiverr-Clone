@@ -8,16 +8,25 @@
     transition: all 0.3s;
 }
 
-.ant-dropdown-trigger:hover {
-    color: rgb(104, 226, 104);
-}
+// .ant-dropdown-trigger:hover {
+//     color: rgb(104, 226, 104);
+// }
 
 .container_drawer {
     // color: rgb(98, 100, 106);
 }
 
 .container_drawer .items_drawer {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    color: rgb(98, 100, 106);
+    color: rgb(112, 113, 117);
+    padding: 10px 0;
+}
+
+.items_drawer:hover {
+    color: rgb(104, 226, 104);
+}
+
+.items_drawer:active {
+    color: rgb(104, 226, 104);
 }

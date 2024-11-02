@@ -95,3 +95,49 @@
 .label_tab {
     font-size: 16px;
 }
+
+.content_left {
+    width: 60%;
+}
+
+.content_right_mobie {
+    display: none;
+}
+
+// .info_creater img {
+//     width: 50px;
+//     height: 50px;
+// }
+
+.content_img img {
+    width: 60%;
+}
+
+.div_infoCreater img {
+    width: 90px;
+    height: 90px;
+}
+
+
+@media (max-width: 1300px) {
+    .content_left {
+        width: 100%;
+    }
+    .content_right {
+        display: none;
+    }
+    .content_right_mobie {
+        display: block;
+    }
+    .avatar_creater img{
+        width: 39px;
+        height: 39px;
+    }
+    .content_img img {
+        width: 90%;
+    }
+    .div_infoCreater img {
+        width: 60px;
+        height: 60px;
+    }
+}

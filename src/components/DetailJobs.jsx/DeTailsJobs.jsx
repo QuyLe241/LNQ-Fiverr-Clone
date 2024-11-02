@@ -490,12 +490,12 @@ const DeTailsJobs = () => {
               </div>
             </div>
             <div className="flex space-x-5">
-              <div className="w-3/5 content_left pr-5 my-3 pb-5">
+              <div className=" content_left pr-5 my-3 pb-5">
                 <h3 className="font-bold" style={{ fontSize: "22px" }}>
                   {item.congViec.tenCongViec}
                 </h3>
                 <div className="flex info_creater space-x-5 py-3">
-                  <div className="">
+                  <div className="avatar_creater">
                     <img
                       style={{
                         width: "50px",
@@ -583,7 +583,7 @@ const DeTailsJobs = () => {
                     <img
                       className="img_job rounded-md"
                       src={item.congViec.hinhAnh}
-                      style={{ width: "60%" }}
+                      style={{}}
                       alt=""
                     />
                   </div>
@@ -702,11 +702,11 @@ const DeTailsJobs = () => {
                     </h3>
                   </div>
                   <div className="flex info_creater space-x-5 py-3">
-                    <div className="">
+                    <div className="div_infoCreater">
                       <img
                         style={{
-                          width: "90px",
-                          height: "90px",
+                          // width: "90px",
+                          // height: "90px",
                           borderRadius: "50%",
                         }}
                         src={item.avatar}
@@ -889,6 +889,13 @@ const DeTailsJobs = () => {
                     onChange={onChange}
                   />
                 </div>
+              </div>
+            </div>
+
+            {/* mobie */}
+            <div className="content_right_mobie flex justify-center">
+              <div className="sidebar_content w-3/4">
+                <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
               </div>
             </div>
           </div>

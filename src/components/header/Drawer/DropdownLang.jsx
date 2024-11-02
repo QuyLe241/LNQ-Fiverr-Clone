@@ -1,7 +1,7 @@
 import React from "react";
 
 const DropdownLang = () => {
-  return <div>DropdownLang</div>;
+  return <div>Language</div>;
 };
 
 export default DropdownLang;

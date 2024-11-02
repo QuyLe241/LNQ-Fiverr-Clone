@@ -55,9 +55,14 @@ const DrawerMobie = () => {
             <DropDownFiverrPro />
           </div>
           <div className="">
-            <p style={{ fontSize: "18px", color: "#404145" }}>General</p>
+            <p
+              className="mt-3"
+              style={{ fontSize: "22px", color: "#404145", fontWeight: 600 }}
+            >
+              General
+            </p>
             <div className="items_drawer">
-              <Link to={pathDefault.home}>Home</Link>
+              <Link to={"/"}>Home</Link>
             </div>
             <div className="items_drawer">
               <DropdownLang />
