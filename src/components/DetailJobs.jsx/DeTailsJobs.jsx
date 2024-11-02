@@ -490,7 +490,7 @@ const DeTailsJobs = () => {
               </div>
             </div>
             <div className="flex space-x-5">
-              <div className=" content_left pr-5 my-3 pb-5">
+              <div className=" content_left my-3 pb-5">
                 <h3 className="font-bold" style={{ fontSize: "22px" }}>
                   {item.congViec.tenCongViec}
                 </h3>
@@ -606,67 +606,69 @@ const DeTailsJobs = () => {
                   </div>
                 </div>
 
-                <div className="works_it rounded-lg py-6">
-                  <div className="title">
-                    <h4
-                      className="font-semibold py-1"
-                      style={{ fontSize: "20px" }}
-                    >
-                      How it works
-                    </h4>
-                  </div>
-                  <div className="">
-                    <p
-                      className="font-semibold py-1"
-                      style={{ fontSize: "", color: "#62646a" }}
-                    >
-                      Here are the steps to complete your{" "}
-                      <span>Basic package</span> project:
-                    </p>
-                  </div>
-                  <div className="list space-y-5 px-5 py-3">
-                    <div className="list_decs flex space-x-3">
-                      <div className="">
-                        <div className="number flex items-center">
-                          <span>1</span>
+                <div className="flex justify-center">
+                  <div className="works_it rounded-lg py-6">
+                    <div className="title">
+                      <h4
+                        className="font-semibold py-1 pl-2"
+                        style={{ fontSize: "20px" }}
+                      >
+                        How it works
+                      </h4>
+                    </div>
+                    <div className="">
+                      <p
+                        className="font-semibold py-1 pl-2"
+                        style={{ fontSize: "", color: "#62646a" }}
+                      >
+                        Here are the steps to complete your{" "}
+                        <span>Basic package</span> project:
+                      </p>
+                    </div>
+                    <div className="list space-y-5 px-5 py-3">
+                      <div className="list_decs flex space-x-3">
+                        <div className="">
+                          <div className="number flex items-center">
+                            <span>1</span>
+                          </div>
+                        </div>
+                        <div className="decs_job  ">
+                          <span>Requirements</span>
+                          <p>
+                            We make sure I have everything I need to complete
+                            your project successfully.
+                          </p>
                         </div>
                       </div>
-                      <div className="decs_job  ">
-                        <span>Requirements</span>
-                        <p>
-                          We make sure I have everything I need to complete your
-                          project successfully.
-                        </p>
+                      <div className="list_decs flex space-x-3">
+                        <div className="number flex items-center">
+                          <span>2</span>
+                        </div>
+                        <div className="decs_job ">
+                          <span>Research - competitive landscape</span>
+                          <p>
+                            I'll conduct competitive research on your product,
+                            your industry, and your unique selling proposition.
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="list_decs flex space-x-3">
-                      <div className="number flex items-center">
-                        <span>2</span>
+                      <div className="list_decs flex space-x-3">
+                        <div className="number flex items-center">
+                          <span>3</span>
+                        </div>
+                        <div className="decs_job ">
+                          <span>Concept</span>
+                          <p>I'll create the concept for the logo.</p>
+                        </div>
                       </div>
-                      <div className="decs_job ">
-                        <span>Research - competitive landscape</span>
-                        <p>
-                          I'll conduct competitive research on your product,
-                          your industry, and your unique selling proposition.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="list_decs flex space-x-3">
-                      <div className="number flex items-center">
-                        <span>3</span>
-                      </div>
-                      <div className="decs_job ">
-                        <span>Concept</span>
-                        <p>I'll create the concept for the logo.</p>
-                      </div>
-                    </div>
-                    <div className="list_decs flex space-x-3">
-                      <div className="number flex items-center">
-                        <span>4</span>
-                      </div>
-                      <div className="decs_job ">
-                        <span>Finalization and Delivery</span>
-                        <p>I'll design the final logo for your product.</p>
+                      <div className="list_decs flex space-x-3">
+                        <div className="number flex items-center">
+                          <span>4</span>
+                        </div>
+                        <div className="decs_job ">
+                          <span>Finalization and Delivery</span>
+                          <p>I'll design the final logo for your product.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -773,95 +775,97 @@ const DeTailsJobs = () => {
                     </Link>
                   </div>
 
-                  <div className="my-5 py-3 container_aboutUser">
-                    <div className="title title_aboutUser px-6 py-3 space-y-2">
-                      <p>
-                        The Fiverr Pro catalog and has been hand-picked by a
-                        dedicated Fiverr Pro team for their skills and
-                        expertise.
-                      </p>
-                      <span className="font-semibold ">Expert in:</span>
-                      <div className="flex items-center">
-                        <CheckIcon
-                          height={"15px"}
-                          width={"15px"}
-                          fill={"#2E25AD"}
-                        />
-                        <span className="font-medium ml-2">
-                          {item.tenChiTietLoai}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="px-3">
-                      <div className="flex inforUser mx-3 py-5">
-                        <div className="w-1/2 info_user space-y-2">
-                          <div className="">
-                            <span>From</span>
-                            <p>Netherlands</p>
-                          </div>
-                          <div className="">
-                            <span>Avg. response time</span>
-                            <p>4 hours</p>
-                          </div>
-                          <div className="">
-                            <span>Languages</span>
-                            <p>English, Dutch, Spanish</p>
-                          </div>
-                        </div>
-                        <div className="w-1/2 info_user space-y-2">
-                          <div className="">
-                            <span>Member since</span>
-                            <p>Apr 2012</p>
-                          </div>
-                          <div className="">
-                            <span>Last delivery</span>
-                            <p>1 day</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="px-3 ">
-                      <div className="decsShort_job mx-3 py-5">
-                        <p>{item.congViec.moTaNgan}</p>
-                        <p></p>
-                      </div>
-                    </div>
-                    <div className="">
-                      <div className="flex space-x-3 p-2 mt-2">
-                        <div className="">
-                          <span className="font-semibold">
-                            Among my clients
+                  <div className="flex justify-center">
+                    <div className="my-5 py-3 container_aboutUser">
+                      <div className="title title_aboutUser px-6 py-3 space-y-2">
+                        <p>
+                          The Fiverr Pro catalog and has been hand-picked by a
+                          dedicated Fiverr Pro team for their skills and
+                          expertise.
+                        </p>
+                        <span className="font-semibold ">Expert in:</span>
+                        <div className="flex items-center">
+                          <CheckIcon
+                            height={"15px"}
+                            width={"15px"}
+                            fill={"#2E25AD"}
+                          />
+                          <span className="font-medium ml-2">
+                            {item.tenChiTietLoai}
                           </span>
                         </div>
-                        <div className="title_new">
-                          <span className="px-2 rounded-md">NEW</span>
+                      </div>
+                      <div className="px-3">
+                        <div className="flex inforUser mx-3 py-5">
+                          <div className="w-1/2 info_user space-y-2">
+                            <div className="">
+                              <span>From</span>
+                              <p>Netherlands</p>
+                            </div>
+                            <div className="">
+                              <span>Avg. response time</span>
+                              <p>4 hours</p>
+                            </div>
+                            <div className="">
+                              <span>Languages</span>
+                              <p>English, Dutch, Spanish</p>
+                            </div>
+                          </div>
+                          <div className="w-1/2 info_user space-y-2">
+                            <div className="">
+                              <span>Member since</span>
+                              <p>Apr 2012</p>
+                            </div>
+                            <div className="">
+                              <span>Last delivery</span>
+                              <p>1 day</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div className="flex among_clients p-5">
-                        <div className="flex decs_clients items-center space-x-3 w-1/2">
+                      <div className="px-3 ">
+                        <div className="decsShort_job mx-3 py-5">
+                          <p>{item.congViec.moTaNgan}</p>
+                          <p></p>
+                        </div>
+                      </div>
+                      <div className="">
+                        <div className="flex space-x-3 p-2 mt-2">
                           <div className="">
-                            <img
-                              src={Ktm}
-                              style={{ width: "25px", height: "25px" }}
-                              alt=""
-                            />
+                            <span className="font-semibold">
+                              Among my clients
+                            </span>
                           </div>
-                          <div className="about_clients">
-                            <span>KLM Royal Dutch Airlines</span>
-                            <p> Transportation Services</p>
+                          <div className="title_new">
+                            <span className="px-2 rounded-md">NEW</span>
                           </div>
                         </div>
-                        <div className="flex decs_clients items-center space-x-3 w-1/2">
-                          <div className="">
-                            <img
-                              src={Fiverrimglogo}
-                              style={{ width: "35px", height: "35px" }}
-                              alt=""
-                            />
+                        <div className="flex among_clients p-5">
+                          <div className="flex decs_clients items-center space-x-3 w-1/2">
+                            <div className="">
+                              <img
+                                src={Ktm}
+                                style={{ width: "25px", height: "25px" }}
+                                alt=""
+                              />
+                            </div>
+                            <div className="about_clients">
+                              <span>KLM Royal Dutch Airlines</span>
+                              <p> Transportation Services</p>
+                            </div>
                           </div>
-                          <div className="about_clients">
-                            <span>Fiverr</span>
-                            <p> Internet Software & Services</p>
+                          <div className="flex decs_clients items-center space-x-3 w-1/2">
+                            <div className="">
+                              <img
+                                src={Fiverrimglogo}
+                                style={{ width: "35px", height: "35px" }}
+                                alt=""
+                              />
+                            </div>
+                            <div className="about_clients">
+                              <span>Fiverr</span>
+                              <p> Internet Software & Services</p>
+                            </div>
                           </div>
                         </div>
                       </div>
