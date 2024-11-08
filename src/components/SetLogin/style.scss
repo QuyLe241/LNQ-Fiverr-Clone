@@ -1,0 +1,17 @@
+.updateProfile span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.updateProfile:hover {
+    color: #12ac52;
+}
+
+.btn_logout {
+    color: rgb(138, 140, 141);
+    font-size: 16px;
+    font-weight: 700;
+    &:hover {
+        color: #12ac52;
+      }
+}

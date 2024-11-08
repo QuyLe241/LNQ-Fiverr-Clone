@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ImgLogin from "../../Img/LoginImg.png";
 import ImgLoginLayer from "../../Img/LoginImgLayer.png";
 import InputCustom from "../../components/Input/InputCustom";
@@ -9,7 +9,7 @@ import { useFormik } from "formik";
 import { Value } from "sass";
 import { useState } from "react";
 import { authService } from "../../services/auth.service";
-import { setLocalStorage } from "../../utils/utils";
+import { setLocalStorage, getLocalStorage } from "../../utils/utils";
 import { useDispatch } from "react-redux";
 import { setValueUser } from "../../redux/authSlice";
 import { NotificationContext } from "../../App";
@@ -19,9 +19,18 @@ const LoginPage = () => {
   //    Sử dụng redeux
   const Navigate = useNavigate();
   const dispatch = useDispatch();
+  const [showPassword, setShowPassword] = useState(false);
 
   //    sử dụng useContext để gọi notification và sử dụng
   const { handleNotification } = useContext(NotificationContext);
+
+  //   sử dụng useEffect để kiểm tra người dùng đã đăng nhập chưa
+  useEffect(() => {
+    const checktonken = getLocalStorage("user");
+    if (checktonken) {
+      Navigate("/error");
+    }
+  }, [Navigate]);
 
   //    sử dụng state để kiểm tra tra dữ liệu hợp lệ
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -115,7 +124,7 @@ const LoginPage = () => {
                 // isValid={!isValid.email}
               />
 
-              <InputCustom
+              {/* <InputCustom
                 contentLable={"Mật khẩu"}
                 placeHolder={"Nhập mật khẩu"}
                 type="password"
@@ -127,7 +136,29 @@ const LoginPage = () => {
                 error={errors.passWord}
                 touched={touched.passWord}
                 isValid={!isValid.passWord}
-              />
+              /> */}
+              <div className="relative password_set">
+                <InputCustom
+                  contentLable={"Mật khẩu"}
+                  placeHolder={"Nhập mật khẩu"}
+                  type={showPassword ? "text" : "password"}
+                  name="passWord"
+                  onChange={handleChange}
+                  value={values.passWord}
+                  handleSubmit={handleSubmit}
+                  onBlur={handleBlur}
+                  error={errors.passWord}
+                  touched={touched.passWord}
+                  isValid={!isValid.passWord}
+                />
+                <button
+                  type="button"
+                  className="absolute btn_showPassword"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? "Ẩn" : "Hiện"}
+                </button>
+              </div>
               <div className="mt-5">
                 <div className="flex justify-center mb-3">
                   <button

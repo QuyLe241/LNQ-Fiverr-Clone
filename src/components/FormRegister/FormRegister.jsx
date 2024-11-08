@@ -19,6 +19,8 @@ const FormRegister = () => {
   // const notificationValue = useContext(NotificationContext);
   // console.log(notificationValue);
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const { handleNotification } = useContext(NotificationContext);
   //  setFieldValue : thuộc tính thay thế khi inout không có name
   //    các trang web sử dụng chung form đăng ký , đăng nhập:
@@ -36,6 +38,7 @@ const FormRegister = () => {
     touched,
     errors,
     setFieldValue,
+    isValid,
     resetForm,
   } = useFormik({
     initialValues: {
@@ -64,7 +67,7 @@ const FormRegister = () => {
           );
           //    chuyển hướng người dùng
           setTimeout(() => {
-            navigate("/dang-nhap");
+            navigate(pathDefault.login);
           }, 2000);
         })
         .catch((err) => {
@@ -135,7 +138,8 @@ const FormRegister = () => {
             handleSubmit={handleSubmit}
             error={errors.email}
           />
-          <InputCustom
+          {/* password */}
+          {/* <InputCustom
             contentLable={"Mật khẩu"}
             name={"passWord"}
             placeHolder={"Nhập mật khẩu"}
@@ -147,18 +151,31 @@ const FormRegister = () => {
             touched={touched.passWord}
             handleSubmit={handleSubmit}
             error={errors.passWord}
-          />
-          {/* test */}
-          {/* <Space direction="vertical">
-            <Input.Password placeholder="input password" />
-            <Input.Password
-              placeholder="input password"
-              iconRender={(visible) =>
-                visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-              }
+          /> */}
+          <div className="relative password_set_register w-full">
+            <InputCustom
+              contentLable={"Mật khẩu"}
+              classWrapper={"w-full p-3"}
+              placeHolder={"Nhập mật khẩu"}
+              type={showPassword ? "text" : "password"}
+              name="passWord"
+              onChange={handleChange}
+              value={values.passWord}
+              handleSubmit={handleSubmit}
+              onBlur={handleBlur}
+              error={errors.passWord}
+              touched={touched.passWord}
+              isValid={!isValid.passWord}
             />
-            <Input.Password disabled placeholder="disabled input password" />
-          </Space> */}
+            <button
+              type="button"
+              className="absolute btn_showPassword"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? "Ẩn" : "Hiện"}
+            </button>
+          </div>
+          {/* test */}
           {/* test */}
           <InputCustom
             contentLable={"Số điện thoại"}
@@ -171,6 +188,7 @@ const FormRegister = () => {
             touched={touched.phone}
             handleSubmit={handleSubmit}
             error={errors.phone}
+            isValid={!isValid.phone}
           />
           <div className="w-1/2 p-3">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">

@@ -16,6 +16,7 @@ import ProSerVice from "../components/ProService/ProSerVice";
 import DeTailsJobs from "../components/DetailJobs.jsx/DeTailsJobs";
 import PageNotFound from "../page/PageNotFound/PageNotFound";
 import LoadingSpin from "../components/Loading/LoadingSpin";
+import ProfileUser from "../page/ProfileUser/ProfileUser";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
@@ -107,6 +108,10 @@ const UseRoutesCustom = () => {
     {
       path: pathDefault.adminLogin,
       element: <AdminLogin />,
+    },
+    {
+      path: pathDefault.profileuser,
+      element: <ProfileUser />,
     },
     {
       path: "*",

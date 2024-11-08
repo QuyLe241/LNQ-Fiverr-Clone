@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FormRegister from "../../components/FormRegister/FormRegister";
 import ImgRegis from "../../Img/RegisterImg1.png";
 import BgRegister from "../../Img/BgRegister.png";
 import BgRegister1 from "../../Img/BgRegister1.png";
 import "./styleRegister.scss";
+import { useNavigate } from "react-router-dom";
+import { getLocalStorage } from "../../utils/utils";
 
 const RegisterPage = () => {
+  //   sử dụng useEffect để kiểm tra người dùng đã đăng nhập chưa
+  const Navigate = useNavigate();
+  useEffect(() => {
+    const checktonken = getLocalStorage("user");
+    if (checktonken) {
+      Navigate("/error");
+    }
+  }, [Navigate]);
   return (
     <div
       className="container_register"

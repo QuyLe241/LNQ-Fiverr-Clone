@@ -10,3 +10,8 @@ export const getLocalStorage = (key) => {
   const dataLocal = localStorage.getItem(key);
   return dataLocal ? JSON.parse(dataLocal) : null;
 };
+
+export const removeLocalStorage = (key) => {
+  //    xóa dữ liệu trong localStorage
+  localStorage.removeItem(key);
+};

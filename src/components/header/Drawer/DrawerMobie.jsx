@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Drawer } from "antd";
 import BarsIcon from "./BarsIcon";
 import { pathDefault } from "../../../common/path";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import DropDownFiverrPro from "./DropDownFiverrPro";
 import DropdownLang from "./DropdownLang";
 import DropdownCurrency from "./DropdownCurrency";
+import { getLocalStorage } from "../../../utils/utils";
 
 const DrawerMobie = () => {
   const [open, setOpen] = React.useState(false);
@@ -19,6 +20,19 @@ const DrawerMobie = () => {
       setLoading(false);
     }, 2000);
   };
+
+  const [dataLocal, setDataLocal] = useState();
+  // Check for token
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    const token = getLocalStorage("user");
+    setDataLocal(token);
+    // const checkToken = token.token;
+    if (token && token.token) {
+      setIsLoggedIn(true);
+    }
+    // else {navigate(pathDefault.login)}
+  }, []);
   return (
     <div>
       <Button
@@ -36,7 +50,33 @@ const DrawerMobie = () => {
         destroyOnClose
         title={
           <div className="pl-3">
-            <span>Hello !</span>
+            {isLoggedIn && (
+              <>
+                <div className="flex items-center">
+                  <div className="px-2">
+                    <span>Hello</span>
+                  </div>
+                  <div className="">
+                    <img
+                      style={{
+                        borderRadius: "50%",
+                        width: "40px",
+                        height: "40px",
+                      }}
+                      src={dataLocal.user.avatar}
+                      alt={dataLocal.user.id}
+                    />
+                  </div>
+                </div>
+              </>
+            )}
+            {!isLoggedIn && (
+              <>
+                <div className="">
+                  <span>Hello!</span>
+                </div>
+              </>
+            )}
           </div>
         }
         placement="right"
@@ -45,12 +85,32 @@ const DrawerMobie = () => {
         onClose={() => setOpen(false)}
       >
         <div className="container_drawer">
-          <div className="login_page items_drawer">
+          {/* <div className="login_page items_drawer">
             <Link to={pathDefault.login}>Sign in</Link>
           </div>
           <div className="register_page items_drawer">
             <Link to={pathDefault.register}>Sign up</Link>
-          </div>
+          </div> */}
+          {!isLoggedIn && (
+            <>
+              <div className="login_page items_drawer">
+                <Link to={pathDefault.login}>Sign in</Link>
+              </div>
+              <div className="register_page items_drawer">
+                <Link to={pathDefault.register}>Sign up</Link>
+              </div>
+            </>
+          )}
+          {isLoggedIn && (
+            <>
+              <div className="login_page items_drawer">
+                <Link to={pathDefault.profileuser}>Update Avatar</Link>
+              </div>
+              <div className="register_page items_drawer">
+                <Link to={pathDefault.profileuser}>Profile</Link>
+              </div>
+            </>
+          )}
           <div className="fiverrPro_mobie items_drawer">
             <DropDownFiverrPro />
           </div>

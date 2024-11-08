@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logoHeader from "../../assets/svg/logoHeader.svg";
 import IconLogoHeader from "../../icon/IconLogoHeader";
 import { pathDefault } from "../../common/path.js";
@@ -14,6 +14,8 @@ import SetLanguage from "./SetLanguage.jsx";
 import LoginPage from "../../page/Login/LoginPage.jsx";
 import FromSearchMobie from "../FormSearchProductMobie/FromSearchMobie.jsx";
 import DrawerMobie from "./Drawer/DrawerMobie.jsx";
+import SetLogin from "../SetLogin/SetLogin.jsx";
+import { getLocalStorage } from "../../utils/utils.js";
 
 const Header = () => {
   const fiverrPro = [
@@ -187,6 +189,19 @@ const Header = () => {
     setIsModalOpen(false);
   };
 
+  const navigate = useNavigate();
+
+  // Check for token
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    const token = getLocalStorage("user");
+    // const checkToken = token.token;
+    if (token && token.token) {
+      setIsLoggedIn(true);
+    }
+    // else {navigate(pathDefault.login)}
+  }, []);
+
   //  mobie
 
   return (
@@ -204,7 +219,7 @@ const Header = () => {
             </Link>
             <FormSearchProduct />
           </div>
-          <nav className="header_navigation space-x-5">
+          <nav className="header_navigation space-x-5 flex items-center">
             <Dropdown
               menu={{
                 items: fiverrPro,
@@ -250,7 +265,8 @@ const Header = () => {
             <a href="#" className="hover:text-green-500">
               Become a seller
             </a>
-            <LinkCustom
+            {/* text login */}
+            {/* <LinkCustom
               content={"Sign in"}
               to={pathDefault.login}
               className={
@@ -263,9 +279,34 @@ const Header = () => {
               className={
                 "border bg-green-500 text-white btn_register rounded-lg"
               }
-            />
-            {/* <Link to={"/"}>Đăng ký</Link>
-            <Link to={"/"}>Đăng nhập</Link> */}
+            /> */}
+            {!isLoggedIn && (
+              <>
+                <LinkCustom
+                  content={"Sign in"}
+                  to={pathDefault.login}
+                  className={
+                    "set_login_account border border-green-500 text-green-500 btn_login rounded-lg"
+                  }
+                />
+                <LinkCustom
+                  content={"Sign up"}
+                  to={pathDefault.register}
+                  className={
+                    "set_login_account border bg-green-500 text-white btn_register rounded-lg"
+                  }
+                />
+              </>
+            )}
+            {/* text login */}
+            {/* <div className="set_login">
+              <SetLogin />
+            </div> */}
+            {isLoggedIn && (
+              <div className="set_login">
+                <SetLogin />
+              </div>
+            )}
           </nav>
         </div>
         <div className="headerContent_mobie">

@@ -8,5 +8,14 @@ https://apicrm.cybersoft.edu.vn/files/14-09-2022-02-12-43-duancuoikhoa-bc.pdf
 
 TK Ad test
 uU88\* test121@gmail.com
+
+tk user
+
+<!-- drt123@gmail.com ppp00P* -->
+
 Chính sửa Role tại Api
 PUT điền : id, email, role
+
+<!-- token -->
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJOb2RlSlMgNDQiLCJIZXRIYW5TdHJpbmciOiIwMi8wNC8yMDI1IiwiSGV0SGFuVGltZSI6IjE3NDM1NTIwMDAwMDAiLCJuYmYiOjE3MjUwMzcyMDAsImV4cCI6MTc0MzY5OTYwMH0.OCEIIliIEc_im8rH12w1upfdzFQWbkFksdmNNICmhs8

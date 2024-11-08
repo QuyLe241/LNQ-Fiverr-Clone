@@ -11,4 +11,5 @@ export const pathDefault = {
   proService: "pro-services",
   listJobsPage: "/list-jobs-page",
   detail: "/cong-viec-chi-tiet",
+  profileuser: "/profile-user",
 };
