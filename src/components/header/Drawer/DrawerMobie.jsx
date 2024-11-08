@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import DropDownFiverrPro from "./DropDownFiverrPro";
 import DropdownLang from "./DropdownLang";
 import DropdownCurrency from "./DropdownCurrency";
-import { getLocalStorage } from "../../../utils/utils";
+import { getLocalStorage, removeLocalStorage } from "../../../utils/utils";
 
 const DrawerMobie = () => {
   const [open, setOpen] = React.useState(false);
@@ -131,6 +131,24 @@ const DrawerMobie = () => {
               <DropdownCurrency />
             </div>
           </div>
+
+          {/* logout */}
+          {isLoggedIn && (
+            <>
+              <div className="items_drawer">
+                <div className="btn_logout">
+                  <button
+                    onClick={() => {
+                      removeLocalStorage("user");
+                      window.location.href = "/";
+                    }}
+                  >
+                    Log out
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </Drawer>
     </div>
