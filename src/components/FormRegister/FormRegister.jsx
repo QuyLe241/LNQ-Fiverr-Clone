@@ -11,6 +11,7 @@ import { Link, useNavigate } from "react-router-dom";
 import LinkCustom from "../LinkCustom/LinkCustom";
 import { pathDefault } from "../../common/path";
 import "./styleFormRegister.scss";
+import HomeInAdminLog from "../../icon/HomeInAdminLog";
 // import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
 // import { Button, Input } from "antd";
 
@@ -247,8 +248,12 @@ const FormRegister = () => {
               Nhấn vào đây để đăng nhập nếu bạn đã có tài khoản.
             </Link>
             <div className="">
-              <Link to={"/"} className="my-3 text-blue-500 hover:text-blue-400">
-                Trở về trang chủ.
+              <Link
+                to={"/"}
+                className="flex items-center my-3 text-blue-500 hover:text-blue-400"
+              >
+                <HomeInAdminLog width={"20px"} height={"20px"} />
+                <span className="ml-1">Trở về trang chủ.</span>
               </Link>
             </div>
           </div>

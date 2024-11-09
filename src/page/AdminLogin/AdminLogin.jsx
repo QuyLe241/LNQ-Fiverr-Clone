@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import InputCustom from "../../components/Input/InputCustom";
 import { useFormik } from "formik";
 import { authService } from "../../services/auth.service";
@@ -6,8 +6,10 @@ import { NotificationContext } from "../../App";
 import { getLocalStorage, setLocalStorage } from "../../utils/utils";
 import { useDispatch } from "react-redux";
 import { setValueUser } from "../../redux/authSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { pathDefault } from "../../common/path";
+import HomeInAdminLog from "../../icon/HomeInAdminLog";
+import "./style.scss";
 
 const AdminLogin = () => {
   //  sử dụng dispatch để gửi itnhs hiệu lên , khi người dùng là admin
@@ -80,12 +82,23 @@ const AdminLogin = () => {
         });
     },
   });
+
+  useEffect(() => {
+    const checktonken = getLocalStorage("user");
+    const checkAdmin = checktonken.user.role;
+    if (checktonken && checkAdmin == "ADMIN") {
+      navigate("/admin");
+    } else {
+      navigate("/error");
+    }
+  }, [navigate]);
+
   return (
-    <div>
-      <div className="container">
-        <div className="admmin_login h-screen flex">
-          <div className="admin_login_animation w-1/2"></div>
-          <div className="admin_login_form w-1/2 flex flex-col justify-center">
+    <div className="body_adminLoginPage" style={{}}>
+      <div className="container h-screen flex justify-center items-center">
+        <div className="admmin_login  w-4/5">
+          {/* <div className="admin_login_animation w-1/2"></div> */}
+          <div className="admin_login_form p-5 w-full flex flex-col justify-center">
             <form action="" className="space-y-5" onSubmit={handleSubmit}>
               <h1
                 style={{ fontSize: "28px", fontWeight: "700" }}
@@ -111,12 +124,20 @@ const AdminLogin = () => {
               <div className="space-y-3">
                 <button
                   type="submit"
-                  className="mt-5 py-2 px-5 bg-green-500 rounded-lg text-white inline-block w-full"
+                  className="mt-5 py-2 px-5 bg-green-600 hover:bg-green-800 rounded-lg text-white inline-block w-full"
                 >
                   Đăng Nhập
                 </button>
               </div>
             </form>
+          </div>
+          <div className="mt-3 px-2">
+            <Link to={"/"} className="flex hover:text-blue-800 text-black">
+              <HomeInAdminLog width={"20px"} height={"20px"} />
+              <span style={{ fontWeight: 600 }} className="ml-1">
+                Trang chủ
+              </span>
+            </Link>
           </div>
         </div>
       </div>

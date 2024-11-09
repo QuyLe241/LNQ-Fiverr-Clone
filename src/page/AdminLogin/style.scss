@@ -1,0 +1,15 @@
+.body_adminLoginPage {
+    // background: rgb(49,228,172);
+    // background: linear-gradient(45deg, rgba(49,228,172,1) 0%, rgba(29,191,115,1) 71%, rgba(69,160,129,1) 100%);
+
+    background: rgb(37,189,142);
+    background: linear-gradient(45deg, rgba(37,189,142,1) 0%, rgba(29,191,115,1) 71%, rgba(69,160,129,1) 100%);
+}
+
+.admmin_login{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

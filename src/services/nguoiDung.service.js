@@ -9,4 +9,9 @@ export const nguoiDungService = {
   deleteUser: (id) => {
     return http.delete(`/users?id=${id}`);
   },
+  //    create
+  createUser: (data) => {
+    //  data là dữ liệu cần tạo được gửi đến server thông qua api
+    return http.post("/users", data);
+  },
 };

@@ -46,7 +46,7 @@ const SetLogin = () => {
     },
   ];
 
-  console.log(getLocalStorage("user"));
+  // console.log(getLocalStorage("user"));
   useEffect(() => {
     // Lấy dữ liệu người dùng từ localStorage và cập nhật state
     const data = getLocalStorage("user");

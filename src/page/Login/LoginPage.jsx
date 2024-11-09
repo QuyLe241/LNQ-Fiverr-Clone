@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 import { setValueUser } from "../../redux/authSlice";
 import { NotificationContext } from "../../App";
 import "./styleLogin.scss";
+import HomeInAdminLog from "../../icon/HomeInAdminLog";
 
 const LoginPage = () => {
   //    Sử dụng redeux
@@ -177,9 +178,10 @@ const LoginPage = () => {
                 <div className="">
                   <Link
                     to={"/"}
-                    className="my-3 text-blue-600 hover:text-blue-500"
+                    className="flex items-center my-3 text-blue-500 hover:text-blue-400"
                   >
-                    Trở về trang chủ.
+                    <HomeInAdminLog width={"20px"} height={"20px"} />
+                    <span className="ml-1">Trở về trang chủ.</span>
                   </Link>
                 </div>
               </div>

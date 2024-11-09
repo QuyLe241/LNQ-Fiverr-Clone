@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { nguoiDungService } from "../services/nguoiDung.service";
 
 //      Tạo reduxThunk
-//      tạo biến đẻ lấy dữ liệu . ở craeteAsyncThunk truyền type và hàm bất đông bộ để thêm và lấy dữ liệu về
+//      tạo biến để lấy dữ liệu . ở craeteAsyncThunk truyền type và hàm bất đông bộ để thêm và lấy dữ liệu về
 
 export const getValueUserApi = createAsyncThunk(
   "nguoiDung/getValueUserApi",

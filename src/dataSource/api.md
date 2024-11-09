@@ -7,7 +7,8 @@ https://fiverrnew.cybersoft.edu.vn/swagger/index.html?fbclid=IwY2xjawEnAHNleHRuA
 https://apicrm.cybersoft.edu.vn/files/14-09-2022-02-12-43-duancuoikhoa-bc.pdf
 
 TK Ad test
-uU88\* test121@gmail.com
+
+<!-- uU88* test121@gmail.com -->
 
 tk user
 
