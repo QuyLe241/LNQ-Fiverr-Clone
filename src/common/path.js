@@ -12,4 +12,7 @@ export const pathDefault = {
   listJobsPage: "/list-jobs-page",
   detail: "/cong-viec-chi-tiet",
   profileuser: "/profile-user",
+  jobManagement: "job-management",
+  uploadAdmin: "upload-admin",
+  commentManagement: "comment-management",
 };

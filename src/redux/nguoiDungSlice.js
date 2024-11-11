@@ -10,7 +10,7 @@ export const getValueUserApi = createAsyncThunk(
   "nguoiDung/getValueUserApi",
   async (_, ThunkAPI) => {
     const result = await nguoiDungService.getAllUsers();
-    console.log(result);
+    // console.log(result);
     //  result cho ra giá trị của payload
     return result.data.content;
   }

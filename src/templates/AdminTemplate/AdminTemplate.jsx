@@ -6,6 +6,7 @@ import {
   UserOutlined,
   VideoCameraOutlined,
   PlusCircleOutlined,
+  CommentOutlined,
 } from "@ant-design/icons";
 import { Button, Layout, Menu, theme, Tabs } from "antd";
 import { getLocalStorage } from "../../utils/utils";
@@ -77,14 +78,23 @@ const AdminTemplate = () => {
               ),
             },
             {
-              key: "jobs",
+              key: `/admin/${pathDefault.jobManagement}`,
               icon: <VideoCameraOutlined />,
-              label: <NavLink>Công việc</NavLink>,
+              label: (
+                <NavLink to={pathDefault.jobManagement}>Công việc</NavLink>
+              ),
             },
             {
-              key: "hire",
+              key: `/admin/${pathDefault.uploadAdmin}`,
               icon: <UploadOutlined />,
-              label: "",
+              label: <NavLink to={pathDefault.uploadAdmin}>Upload</NavLink>,
+            },
+            {
+              key: `/admin/${pathDefault.commentManagement}`,
+              icon: <CommentOutlined />,
+              label: (
+                <NavLink to={pathDefault.commentManagement}>Comment</NavLink>
+              ),
             },
           ]}
         />

@@ -17,6 +17,9 @@ import DeTailsJobs from "../components/DetailJobs.jsx/DeTailsJobs";
 import PageNotFound from "../page/PageNotFound/PageNotFound";
 import LoadingSpin from "../components/Loading/LoadingSpin";
 import ProfileUser from "../page/ProfileUser/ProfileUser";
+import JobManagement from "../components/JobManagement/JobManagement";
+import UploadAdmin from "../components/UploadAdmin/UploadAdmin";
+import CommentManagement from "../components/CommentManagement/CommentManagement";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
@@ -102,6 +105,18 @@ const UseRoutesCustom = () => {
         {
           path: pathDefault.createUser,
           element: <CreateUser />,
+        },
+        {
+          path: pathDefault.jobManagement,
+          element: <JobManagement />,
+        },
+        {
+          path: pathDefault.uploadAdmin,
+          element: <UploadAdmin />,
+        },
+        {
+          path: pathDefault.commentManagement,
+          element: <CommentManagement />,
         },
       ],
     },

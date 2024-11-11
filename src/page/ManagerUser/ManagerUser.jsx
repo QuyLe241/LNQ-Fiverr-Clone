@@ -88,7 +88,7 @@ const ManagerUser = () => {
               nguoiDungService
                 .deleteUser(record.id)
                 .then((res) => {
-                  console.log(res);
+                  // console.log(res);
                   handleNotification(res.data.message, "success");
                   //    đồng bộ dữ liệu
                   dispatch(getValueUserApi());

@@ -5,6 +5,7 @@ import { Dropdown, Space } from "antd";
 import { Link } from "react-router-dom";
 import { pathDefault } from "../../common/path";
 import { getLocalStorage, removeLocalStorage } from "../../utils/utils";
+import { nguoiDungService } from "../../services/nguoiDung.service";
 
 const SetLogin = () => {
   const [dataUser, setDataUser] = useState(null);
@@ -45,12 +46,24 @@ const SetLogin = () => {
       key: "2",
     },
   ];
-
+  const [infoUser, setInfoUser] = useState(null);
   // console.log(getLocalStorage("user"));
   useEffect(() => {
     // Lấy dữ liệu người dùng từ localStorage và cập nhật state
     const data = getLocalStorage("user");
     setDataUser(data);
+    const idUser = getLocalStorage("user").user.id;
+    console.log(idUser);
+    // get info user
+    nguoiDungService
+      .handleInfoUser(idUser)
+      .then((res) => {
+        setInfoUser(res.data.content);
+        // console.log(res);
+      })
+      .catch((err) => {
+        // console.log(err);
+      });
   }, []);
   return (
     <div>
@@ -64,16 +77,16 @@ const SetLogin = () => {
         <a onClick={(e) => e.preventDefault()}>
           <Space>
             <div className="">
-              {dataUser && (
+              {infoUser && (
                 <>
                   <img
-                    src={dataUser.user.avatar}
+                    src={infoUser.avatar}
                     style={{
-                      width: "50px",
-                      height: "50px",
+                      width: "39px",
+                      height: "39px",
                       borderRadius: "50%",
                     }}
-                    alt={`ID:${dataUser.user.id}`}
+                    alt={`ID:${infoUser.id}`}
                   />
                   {/* <h3>{dataUser.user.email}</h3> */}
                 </>
