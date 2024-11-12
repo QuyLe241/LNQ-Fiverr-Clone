@@ -15,3 +15,32 @@
     font-size: 25px;
     font-weight: 600;
 }
+
+.infor_profile_user p {
+    text-align: center;
+    font-weight: 600;
+    color: rgb(66, 66, 64);
+}
+
+.moadl_edit_infor .ant-modal-content .ant-modal-footer {
+    display: none;
+}
+
+.input_update_avatar input[type="file"] {
+    display: none;
+    // visibility: hidden;
+}
+.input_update_avatar label {
+    display: inline-block;
+    color: black;
+    border: 1px solid #b3b2b2;
+    border-radius: 5px;
+    padding: 2px 10px;
+    transition: all 0.3s;
+    font-size: 14px;
+    &:hover {
+        border: rgb(23, 215, 23) 1px solid;
+        color: rgb(23, 215, 23) ;
+        cursor: pointer;
+    }
+}
