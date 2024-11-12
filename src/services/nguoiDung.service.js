@@ -26,4 +26,12 @@ export const nguoiDungService = {
   handleInfoUser: (id) => {
     return http.get(`/users/${id}`);
   },
+  //  profile user
+  profileUser: (data, token) => {
+    return http.put("/users", data, {
+      headers: {
+        token,
+      },
+    });
+  },
 };

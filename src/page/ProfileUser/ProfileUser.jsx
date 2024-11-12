@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import "./style.scss";
 import { removeLocalStorage, getLocalStorage } from "../../utils/utils";
 import { nguoiDungService } from "../../services/nguoiDung.service";
+import { useDispatch } from "react-redux";
 
 const ProfileUser = () => {
+  const dispatch = useDispatch();
   const [infoUser, setInfoUser] = useState(null);
   console.log(infoUser);
   useEffect(() => {

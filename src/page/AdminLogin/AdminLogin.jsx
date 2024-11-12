@@ -12,7 +12,7 @@ import HomeInAdminLog from "../../icon/HomeInAdminLog";
 import "./style.scss";
 
 const AdminLogin = () => {
-  //  sử dụng dispatch để gửi itnhs hiệu lên , khi người dùng là admin
+  //  sử dụng dispatch để gửi tính hiệu lên , khi người dùng là admin
   const dispatch = useDispatch();
   //  chuyển hướng người dùng
   const navigate = useNavigate();
@@ -84,12 +84,16 @@ const AdminLogin = () => {
   });
 
   useEffect(() => {
-    const checktonken = getLocalStorage("user");
-    const checkAdmin = checktonken.user.role;
-    if (checktonken && checkAdmin == "ADMIN") {
-      navigate("/admin");
+    const checkToken = getLocalStorage("user");
+    if (checkToken && checkToken.user) {
+      const checkAdmin = checkToken.user.role;
+      if (checkAdmin === "ADMIN") {
+        navigate(pathDefault.adminTemplate);
+      } else {
+        navigate("/error");
+      }
     } else {
-      navigate("/error");
+      navigate(pathDefault.adminLogin);
     }
   }, [navigate]);
 
