@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { pathDefault } from "../../common/path";
 import { getLocalStorage, removeLocalStorage } from "../../utils/utils";
 import { nguoiDungService } from "../../services/nguoiDung.service";
+import AvatarImg from "../../assets/Img/AvatarImg.png";
 
 const SetLogin = () => {
   const [dataUser, setDataUser] = useState(null);
@@ -77,10 +78,10 @@ const SetLogin = () => {
         <a onClick={(e) => e.preventDefault()}>
           <Space>
             <div className="">
-              {infoUser && (
+              {infoUser ? (
                 <>
                   <img
-                    src={infoUser.avatar}
+                    src={infoUser.avatar || AvatarImg}
                     style={{
                       width: "39px",
                       height: "39px",
@@ -89,6 +90,10 @@ const SetLogin = () => {
                     alt={`ID:${infoUser.id}`}
                   />
                   {/* <h3>{dataUser.user.email}</h3> */}
+                </>
+              ) : (
+                <>
+                  <img src={AvatarImg} alt="avatar" />
                 </>
               )}
             </div>

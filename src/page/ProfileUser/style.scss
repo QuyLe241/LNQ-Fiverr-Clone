@@ -2,6 +2,11 @@
     border-bottom: 1px solid #e4e5e7;    
 }
 
+.inforUser_profile  {
+    background-color: #fcfafa;
+}
+
+
 .profileUser_btn_logout button {
     font-size: 20px;
     font-weight: 700;
@@ -20,6 +25,7 @@
     text-align: center;
     font-weight: 600;
     color: rgb(66, 66, 64);
+    padding: 3px 0;
 }
 
 .moadl_edit_infor .ant-modal-content .ant-modal-footer {
@@ -43,4 +49,18 @@
         color: rgb(23, 215, 23) ;
         cursor: pointer;
     }
+}
+
+.item_skill span {
+    border: #17a483 1px solid;
+    color: #17a483;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.item_certification span {
+    border: #5ba0dc 1px solid;
+    color: #5ba0dc;
+    border-radius: 10px;
+    padding: 0 5px;
 }

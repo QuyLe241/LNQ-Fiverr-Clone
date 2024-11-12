@@ -9,15 +9,19 @@ const UploadAdmin = () => {
   const [errSizeImage, setErrSizeImage] = useState("");
 
   const { user } = useSelector((state) => state.authSlice);
+  // console.log(uploadImage);
 
   const handleSubmitAvatar = (e) => {
     e.preventDefault();
     // console.log("submit");
+    // console.log(uploadImage);
     //  gọi tới phương thức formData(do BE quy định) của js để tạo ra một form data
     const formData = new FormData();
     if (uploadImage) {
       //  append tên key(để be định hình đúng) và giá trị của file vào formData
       formData.append("formFile", uploadImage.file);
+      // console.log(formData);
+      // console.log(uploadImage);
       nguoiDungService
         .uploadAvatar(formData, user.token)
         .then((res) => {
