@@ -93,7 +93,11 @@ const SetLogin = () => {
                 </>
               ) : (
                 <>
-                  <img src={AvatarImg} alt="avatar" />
+                  <img
+                    style={{ height: "35px" }}
+                    src={AvatarImg}
+                    alt="avatar"
+                  />
                 </>
               )}
             </div>

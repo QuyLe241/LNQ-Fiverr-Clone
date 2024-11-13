@@ -35,6 +35,7 @@ const MadeOnFiverr = () => {
     lineHeight: "160px",
     textAlign: "center",
     background: "#364d79",
+    border: "1px solid #d0cdcd",
   };
 
   const styleArrowRight = {
@@ -44,6 +45,7 @@ const MadeOnFiverr = () => {
     backgroundColor: "#fff",
     padding: "12px",
     borderRadius: "50%",
+    border: "1px solid #d0cdcd",
   };
   const styleArrowLeft = {
     position: "absolute",
@@ -52,6 +54,7 @@ const MadeOnFiverr = () => {
     backgroundColor: "#fff",
     padding: "12px",
     borderRadius: "50%",
+    border: "1px solid #d0cdcd",
     zIndex: "2",
   };
 

@@ -146,7 +146,7 @@ const CreateUser = () => {
                   htmlFor=""
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Giới tính
+                  Chức vụ
                 </label>
                 <select
                   name="role"
@@ -200,7 +200,7 @@ const CreateUser = () => {
                     // console.log(value);
                     setUserValue({ ...userValue, certification: value });
                   }}
-                  placeholder="Chọn skill"
+                  placeholder="Chọn Certification"
                   tokenSeparators={[","]}
                   options={optionListSkill}
                 />

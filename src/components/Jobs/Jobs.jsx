@@ -4,32 +4,55 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./CustomSlider.scss"; // Đảm bảo bạn đã có file CSS tùy chỉnh này
 import AwholeWord from "./AwholeWord";
+import DesignImg from "../../../public/img/logo-design.png";
+import SeoImg from "../../../public/img/seo.png";
+import ChevronRight from "../MadeOnFiverr/Arrow/ChevronRight";
+import ChevronLeft from "../MadeOnFiverr/Arrow/ChevronLeft";
 
-const PreviousArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} `}
-      style={{ ...style, display: "block", right: "25px", zIndex: 1 }}
-      onClick={onClick}
-    >
-      <i className="fa fa-chevron-left "></i>
-    </div>
-  );
+const styleArrowRight = {
+  position: "absolute",
+  right: "15px",
+  top: "50%",
+  backgroundColor: "#fff",
+  padding: "12px",
+  borderRadius: "50%",
+  border: "1px solid #d0cdcd",
+};
+const styleArrowLeft = {
+  position: "absolute",
+  left: "15px",
+  top: "50%",
+  backgroundColor: "#fff",
+  padding: "12px",
+  borderRadius: "50%",
+  border: "1px solid #d0cdcd",
+  zIndex: "2",
 };
 
-const NextArrow = (props) => {
-  const { className, style, onClick } = props;
+function SampleNextArrow(props) {
+  const { onClick } = props;
   return (
     <div
-      className={`${className}`}
-      style={{ ...style, display: "block", right: "10px", zIndex: 1 }}
+      className="cursor-pointer hover:bg-slate-500"
+      style={styleArrowRight}
       onClick={onClick}
     >
-      <i className="fa fa-chevron-right"></i>
+      <ChevronRight height={"15px"} width={"15px"} />
     </div>
   );
-};
+}
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className="cursor-pointer hover:bg-slate-500"
+      style={styleArrowLeft}
+      onClick={onClick}
+    >
+      <ChevronLeft width={"15px"} height={"15px"} />
+    </div>
+  );
+}
 
 const Jobs = () => {
   const settings = {
@@ -37,8 +60,8 @@ const Jobs = () => {
     slidesToShow: 6, // Hiển thị 5 ảnh cùng lúc
     slidesToScroll: 2, // Cuộn 1 ảnh mỗi lần
     centerMode: false, // Đảm bảo ảnh không bị kéo về giữa
-    nextArrow: <NextArrow />,
-    prevArrow: <PreviousArrow />,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     variableWidth: false, // Đảm bảo chiều rộng ảnh đồng đều
     responsive: [
       {
@@ -65,14 +88,14 @@ const Jobs = () => {
           infinite: true,
         },
       },
-      {
-        breakpoint: 450,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
+      // {
+      //   breakpoint: 450,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1,
+      //     initialSlide: 2,
+      //   },
+      // },
     ],
   };
 
@@ -102,7 +125,7 @@ const Jobs = () => {
               <a href="">
                 <h2 className="text pb-7">Logo Design </h2>
                 <img
-                  src="../../../public/img/logo-design.png"
+                  src={DesignImg}
                   alt=""
                   className="w-full h-auto rounded-lg"
                 />
@@ -116,11 +139,7 @@ const Jobs = () => {
             <div className="customeborder tLUiXHr  hover:opacity-90 ">
               <a href="">
                 <h2 className="pb-7 text">SEO</h2>
-                <img
-                  src="../../../public/img/seo.png"
-                  alt=""
-                  className="w-full h-auto rounded-lg"
-                />
+                <img src={SeoImg} alt="" className="w-full h-auto rounded-lg" />
               </a>
             </div>
           </div>

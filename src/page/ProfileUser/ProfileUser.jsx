@@ -414,30 +414,52 @@ const ProfileUser = () => {
                     <div className="px-2">
                       <p>Skill: </p>
                     </div>
-                    <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
-                      {infoUser.skill.map((item, index) => (
-                        <div
-                          key={index}
-                          className="item_skill flex justify-center"
-                        >
-                          <span>{item}</span>
+                    {/* test */}
+                    <div className="">
+                      {typeof infoUser.skill === "string" ? (
+                        <div className="">
+                          <span>Chưa cập nhật</span>
                         </div>
-                      ))}
+                      ) : (
+                        <div className="flex">
+                          <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+                            {infoUser.skill.map((item, index) => (
+                              <div
+                                key={index}
+                                className="item_skill flex justify-center"
+                              >
+                                <span>{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
+                    {/* test */}
                   </div>
-                  <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center mt-2">
                     <div className="px-2">
                       <p>Certification:</p>
                     </div>
-                    <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
-                      {infoUser.certification.map((item, index) => (
-                        <div
-                          key={index}
-                          className="item_certification flex justify-center"
-                        >
-                          <span>{item}</span>
+                    <div className="">
+                      {typeof infoUser.certification === "string" ? (
+                        <div className="">
+                          <span>Chưa cập nhật</span>
                         </div>
-                      ))}
+                      ) : (
+                        <div className="flex">
+                          <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+                            {infoUser.certification.map((item, index) => (
+                              <div
+                                key={index}
+                                className="item_certification flex justify-center"
+                              >
+                                <span>{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="edit_info flex justify-center my-2">
