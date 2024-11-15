@@ -1,24 +1,88 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { getLocalStorage } from '../utils/utils';
+//
 
-//      Tạo nhanh : rxslice
+// import { createSlice } from "@reduxjs/toolkit";
+// import { getLocalStorage } from "../utils/utils";
+
+// // Initial state
+// const initialState = {
+//   user: getLocalStorage("user"),
+// };
+
+// // Create the slice
+// const authSlice = createSlice({
+//   name: "auth",
+//   initialState,
+//   reducers: {
+//     setValueUser: (state, action) => {
+//       state.user = action.payload;
+//     },
+//     // New action to update user data
+//     updateUser: (state, action) => {
+//       state.user = { ...state.user, ...action.payload };
+//     },
+//   },
+// });
+
+// // Export the action creators
+// export const { setValueUser, updateUser } = authSlice.actions;
+
+// // Export the reducer
+// export default authSlice.reducer;
+
+// import { createSlice } from "@reduxjs/toolkit";
+// import { getLocalStorage } from "../utils/utils";
+
+// // Initial state
+// const initialState = {
+//   user: getLocalStorage("user"),
+// };
+
+// // Create the slice
+// const authSlice = createSlice({
+//   name: "auth",
+//   initialState,
+//   reducers: {
+//     setValueUser: (state, action) => {
+//       state.user = action.payload;
+//     },
+//     // New action to update user data
+//     updateUser: (state, action) => {
+//       state.user = { ...state.user, ...action.payload };
+//     },
+//   },
+// });
+
+// // Export the action creators
+// export const { setValueUser, updateUser } = authSlice.actions;
+
+// // Export the reducer
+// export default authSlice.reducer;
+
+import { createSlice } from "@reduxjs/toolkit";
+import { getLocalStorage } from "../utils/utils";
+
+// Initial state
 const initialState = {
-    //      khi người dùng tắt web và mở lại gọi đến localStorage va hiển thị
-    //      lại dữ liệu đăng nhập như: avatar, tên,...
-
-    user: getLocalStorage("user"),
+  user: getLocalStorage("user"),
 };
 
+// Create the slice
 const authSlice = createSlice({
-  name: "ath",
+  name: "auth",
   initialState,
   reducers: {
     setValueUser: (state, action) => {
-        state.user = action.payload;
+      state.user = action.payload;
+    },
+    // New action to update user data
+    updateUser: (state, action) => {
+      state.user = { ...state.user, ...action.payload };
     },
   },
 });
 
-export const {setValueUser} = authSlice.actions
+// Export the action creators
+export const { setValueUser, updateUser } = authSlice.actions;
 
-export default authSlice.reducer
+// Export the reducer
+export default authSlice.reducer;

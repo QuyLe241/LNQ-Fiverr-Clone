@@ -84,18 +84,18 @@ const Jobs = () => {
         breakpoint: 650,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           infinite: true,
         },
       },
-      // {
-      //   breakpoint: 450,
-      //   settings: {
-      //     slidesToShow: 1,
-      //     slidesToScroll: 1,
-      //     initialSlide: 2,
-      //   },
-      // },
+      {
+        breakpoint: 450,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
     ],
   };
 

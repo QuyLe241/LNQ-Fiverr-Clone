@@ -1,0 +1,41 @@
+.item_jobs_style {
+    // overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    &:hover {
+        .image_jobs {
+            border-radius: 10px;
+        }
+        .image_jobs > img{
+            transition: all 0.3s;
+            transform: scale(1.1);
+        }
+    }
+}
+.see_details {
+    display: none;
+    position: absolute;
+    // top: 10%;
+    bottom: 45%;
+    left: 38%;
+    background: green;
+    padding: 5px 15px;
+    background: rgba(15, 209, 96, 0.2);
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(8px);
+    &:hover {
+        color: rgb(81, 228, 81);
+        backdrop-filter: blur(1px);
+    }
+}
+.see_details span{
+    font-size: 16px;
+    font-weight: 700;
+}
+.image_jobs {
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.image_jobs span {
+    overflow: hidden;
+}

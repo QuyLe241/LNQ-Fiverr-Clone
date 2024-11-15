@@ -1,5 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import {
+  Link,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import { congViecService } from "../../services/congViec.service";
 import "./styleDetail.scss";
 import HomeIcon from "./Icon/HomeIcon";
@@ -12,27 +17,75 @@ import Fiverrimglogo from "../../assets/Img/fiverrimglogo.png";
 import { Tabs } from "antd";
 import TickIcon from "./Icon/TickIcon";
 import ArrowIcon from "./Icon/ArrowIcon";
+import { useSelector } from "react-redux";
+import { NotificationContext } from "../../App";
+import { pathDefault } from "../../common/path";
+import ColumnGroup from "antd/es/table/ColumnGroup";
 
 const DeTailsJobs = () => {
+  const navigate = useNavigate();
+  const { handleNotification } = useContext(NotificationContext);
+  const { user } = useSelector((state) => state.authSlice);
+  console.log(user);
   const [searchParams, setSearchParams] = useSearchParams();
   // console.log(searchParam.get("deTail"));
   // console.log(searchParam);
   const { id } = useParams();
   const [listJob, setListJob] = useState([]);
+  const idCongViec = searchParams.get("detail");
+  console.log(idCongViec);
+  // xử lý đặt công việc
+  const handleSetJobs = async () => {
+    // const { user } = useSelector((state) => state.authSlice);
+    const token = user.token;
+    console.log(token);
+    const maNguoiThue = user.user.id;
+    console.log(maNguoiThue);
+    //  lấy ngày hiện tại
+    const dateSetJob = new Date();
+    // console.log(dateSetJob);
+    const maCongViec = searchParams.get("detail");
+    const data = {
+      maCongViec: maCongViec,
+      maNguoiThue: maNguoiThue,
+    };
+    if (user) {
+      const result = await congViecService.setJob(token, data);
+      try {
+        console.log(result);
+        handleNotification(
+          "Đặt công việc thành công, kiểm tra tại Profile",
+          "success"
+        );
+      } catch (err) {
+        handleNotification("Đặt công việc thất bại, cần đăng nhập.", "error");
+        console.log(err);
+      }
+    } else {
+      console.log("user null");
+      handleNotification("Vui lòng đăng nhập", "error");
+      console.log("user null");
+    }
+  };
 
   //
   useEffect(() => {
     const idCongViec = searchParams.get("detail");
     // console.log(idCongViec);
-    congViecService
-      .detailJob(idCongViec)
-      .then((res) => {
-        // console.log(res.data);
-        setListJob(res.data.content);
-      })
-      .catch((err) => {
-        // console.log(err);
-      });
+    if (user == null) {
+      navigate(pathDefault.login);
+      handleNotification("Bạn cần đăng nhập để xem chi tiết", "error");
+    } else {
+      congViecService
+        .detailJob(idCongViec)
+        .then((res) => {
+          console.log(res.data);
+          setListJob(res.data.content);
+        })
+        .catch((err) => {
+          // console.log(err);
+        });
+    }
   }, [searchParams]);
 
   //  Tabs
@@ -157,8 +210,11 @@ const DeTailsJobs = () => {
                 <div className="space-y-5 py-5">
                   <div className="flex justify-center">
                     <button
+                      onClick={() => {
+                        handleSetJobs();
+                      }}
                       style={{ border: "1px black solid" }}
-                      className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
+                      className="flex items-center justify-center bg-slate-800 text-white w-3/4 py-2 rounded-lg font-bold hover:bg-black duration-500"
                     >
                       Continue{" "}
                       {/* <ArrowIcon width={"16px"} height={"16px"} fill={""} /> */}
@@ -166,6 +222,12 @@ const DeTailsJobs = () => {
                   </div>
                   <div className="flex justify-center ">
                     <button
+                      onClick={() => {
+                        handleNotification(
+                          "Chức năng đang phát triển",
+                          "success"
+                        );
+                      }}
                       className="w-3/4 rounded-lg py-2 font-semibold hover:bg-black hover:text-white duration-500"
                       style={{ border: "1px black solid" }}
                     >
@@ -296,6 +358,9 @@ const DeTailsJobs = () => {
                 <div className="space-y-5 py-5">
                   <div className="flex justify-center">
                     <button
+                      onClick={() => {
+                        handleSetJobs();
+                      }}
                       style={{ border: "1px black solid" }}
                       className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
                     >
@@ -305,6 +370,12 @@ const DeTailsJobs = () => {
                   </div>
                   <div className="flex justify-center ">
                     <button
+                      onClick={() => {
+                        handleNotification(
+                          "Chức năng đang phát triển",
+                          "success"
+                        );
+                      }}
                       className="w-3/4 rounded-lg py-2 font-semibold hover:bg-black hover:text-white duration-500"
                       style={{ border: "1px black solid" }}
                     >
@@ -444,6 +515,12 @@ const DeTailsJobs = () => {
                   </div>
                   <div className="flex justify-center ">
                     <button
+                      onClick={() => {
+                        handleNotification(
+                          "Chức năng đang phát triển",
+                          "success"
+                        );
+                      }}
                       className="w-3/4 rounded-lg py-2 font-semibold hover:bg-black hover:text-white duration-500"
                       style={{ border: "1px black solid" }}
                     >

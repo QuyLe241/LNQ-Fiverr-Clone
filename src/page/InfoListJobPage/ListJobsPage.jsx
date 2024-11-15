@@ -36,9 +36,12 @@ const ListJobsPage = () => {
             {listJobs.map((item, index) => {
               //   console.log(item);
               return (
-                <div className="my-3 py-2 shadow-xl rounded-md" key={index}>
+                <div
+                  className="my-3 py-2 shadow-xl rounded-md hover:bg-slate-200 duration-300"
+                  key={index}
+                >
                   <Link to={`${pathDefault.detail}?detail=${item.id}`}>
-                    <div className="">
+                    <div className="item_jobs_style">
                       <div className="image_jobs">
                         <img
                           className="w-full rounded-lg"
@@ -54,7 +57,10 @@ const ListJobsPage = () => {
                       <div className="">
                         <div className="rate flex items-center mt-2">
                           <Star />
-                          <span className="ml-1 font-bold">
+                          <span
+                            style={{ color: "#e1a01b" }}
+                            className="ml-1 font-bold"
+                          >
                             {item.saoCongViec}
                           </span>
                           <span className="ml-1">({item.danhGia})</span>
@@ -69,6 +75,9 @@ const ListJobsPage = () => {
                             currency: "USD",
                           })}
                         </span>
+                      </div>
+                      <div className="see_details">
+                        <span>See details</span>
                       </div>
                     </div>
                   </Link>

@@ -35,7 +35,7 @@ export const nguoiDungService = {
     });
   },
   // eidt profile user
-  editProfileUser: (id) => {
-    return http.put(`/users/${id}`);
+  editProfileUser: (id, data) => {
+    return http.put(`/users/${id}`, data);
   },
 };

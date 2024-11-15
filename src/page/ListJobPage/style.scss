@@ -1,0 +1,13 @@
+.item_jobs_search {
+    // overflow: hidden;
+    transition: all 0.3s;
+    &:hover {
+        img {
+            transition: all 0.3s;
+            transform: scale(1.1);
+        }
+    }
+}
+.item_image-search {
+    overflow: hidden;
+}

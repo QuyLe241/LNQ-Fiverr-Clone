@@ -10,4 +10,12 @@ export const congViecService = {
   detailJob: (data) => {
     return http.get(`/cong-viec/lay-cong-viec-chi-tiet/${data}`);
   },
+  //  đặt công việc
+  setJob: (token, data) => {
+    return http.post("/thue-cong-viec", data, {
+      headers: {
+        token,
+      },
+    });
+  },
 };

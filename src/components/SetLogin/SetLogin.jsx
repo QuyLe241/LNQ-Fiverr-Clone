@@ -94,7 +94,7 @@ const SetLogin = () => {
               ) : (
                 <>
                   <img
-                    style={{ height: "35px" }}
+                    style={{ height: "35px", borderRadius: "50%" }}
                     src={AvatarImg}
                     alt="avatar"
                   />

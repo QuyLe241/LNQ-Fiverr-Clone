@@ -70,7 +70,7 @@ const LoginPage = () => {
         );
         setTimeout(() => {
           Navigate("/");
-        }, 2000);
+        }, 1500);
       } catch (err) {
         console.log(err);
         //    Đăng nhập thất bại
