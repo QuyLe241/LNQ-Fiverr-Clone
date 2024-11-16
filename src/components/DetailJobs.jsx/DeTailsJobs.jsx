@@ -26,21 +26,21 @@ const DeTailsJobs = () => {
   const navigate = useNavigate();
   const { handleNotification } = useContext(NotificationContext);
   const { user } = useSelector((state) => state.authSlice);
-  console.log(user);
+  // console.log(user);
   const [searchParams, setSearchParams] = useSearchParams();
   // console.log(searchParam.get("deTail"));
   // console.log(searchParam);
   const { id } = useParams();
   const [listJob, setListJob] = useState([]);
   const idCongViec = searchParams.get("detail");
-  console.log(idCongViec);
+  // console.log(idCongViec);
   // xử lý đặt công việc
   const handleSetJobs = async () => {
     // const { user } = useSelector((state) => state.authSlice);
     const token = user.token;
-    console.log(token);
+    // console.log(token);
     const maNguoiThue = user.user.id;
-    console.log(maNguoiThue);
+    // console.log(maNguoiThue);
     //  lấy ngày hiện tại
     const dateSetJob = new Date();
     // console.log(dateSetJob);
@@ -52,19 +52,19 @@ const DeTailsJobs = () => {
     if (user) {
       const result = await congViecService.setJob(token, data);
       try {
-        console.log(result);
+        // console.log(result);
         handleNotification(
           "Đặt công việc thành công, kiểm tra tại Profile",
           "success"
         );
       } catch (err) {
         handleNotification("Đặt công việc thất bại, cần đăng nhập.", "error");
-        console.log(err);
+        // console.log(err);
       }
     } else {
-      console.log("user null");
+      // console.log("user null");
       handleNotification("Vui lòng đăng nhập", "error");
-      console.log("user null");
+      // console.log("user null");
     }
   };
 
@@ -79,7 +79,7 @@ const DeTailsJobs = () => {
       congViecService
         .detailJob(idCongViec)
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           setListJob(res.data.content);
         })
         .catch((err) => {
@@ -506,6 +506,9 @@ const DeTailsJobs = () => {
                 <div className="space-y-5 py-5">
                   <div className="flex justify-center">
                     <button
+                      onClick={() => {
+                        handleSetJobs();
+                      }}
                       style={{ border: "1px black solid" }}
                       className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
                     >

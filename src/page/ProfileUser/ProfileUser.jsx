@@ -9,6 +9,7 @@ import { Modal } from "antd";
 import ModalEditInfo from "./ModalEditInfo";
 import { NotificationContext } from "../../App";
 import AvatarImg from "../../assets/Img/AvatarImg.png";
+import ModalJobUser from "./ModalJobUser";
 
 const ProfileUser = () => {
   const { user } = useSelector((state) => state.authSlice);
@@ -59,17 +60,26 @@ const ProfileUser = () => {
         <div className="flex header_profileUser justify-around items-center py-3">
           <Link to={"/"} className="flex items-end hover:text-green-500">
             <HomeInAdminLog width={"25px"} height={"25px"} />
-            <span style={{ fontWeight: 600 }}>Home</span>
+            <div className="flex items-end">
+              <span className="flex items-end" style={{ fontWeight: 600 }}>
+                Home
+              </span>
+            </div>
           </Link>
-          <div className="profileUser_btn_logout">
-            <button
-              onClick={() => {
-                removeLocalStorage("user");
-                window.location.href = "/";
-              }}
-            >
-              Log out
-            </button>
+          <div className="flex items-center space-x-2">
+            <div className="setJobUser">
+              <ModalJobUser />
+            </div>
+            <div className="profileUser_btn_logout">
+              <button
+                onClick={() => {
+                  removeLocalStorage("user");
+                  window.location.href = "/";
+                }}
+              >
+                Log out
+              </button>
+            </div>
           </div>
         </div>
         <div className="">

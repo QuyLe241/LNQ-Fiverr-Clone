@@ -3,15 +3,17 @@ import { congViecService } from "../services/congViec.service";
 
 export const getListJobUser = createAsyncThunk(
   "setJobUser/getListJobUser",
-  async (data, token, ThunkAPI) => {
-    const result = await congViecService.listJobs(data, token);
-    console.log(result);
+  async (token, ThunkAPI) => {
+    const result = await congViecService.getJobUser(token);
+    // console.log("listjob", result);
     // return result.data.content;
+    // result cho ra giá trị của payload
+    return result.data.content;
   }
 );
 
 const initialState = {
-  listJobUser: {},
+  listJobUser: [],
 };
 
 const jobUserSlice = createSlice({
@@ -20,7 +22,7 @@ const jobUserSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getListJobUser.fulfilled, (state, action) => {
-      console.log(action);
+      console.log("action", action);
       state.listJobUser = action.payload;
     });
     builder.addCase(getListJobUser.pending, (state, action) => {

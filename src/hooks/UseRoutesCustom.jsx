@@ -20,6 +20,7 @@ import ProfileUser from "../page/ProfileUser/ProfileUser";
 import JobManagement from "../components/JobManagement/JobManagement";
 import UploadAdmin from "../components/UploadAdmin/UploadAdmin";
 import CommentManagement from "../components/CommentManagement/CommentManagement";
+import BecomeASeller from "../page/BecomeAseller/BecomeASeller";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
@@ -76,7 +77,10 @@ const UseRoutesCustom = () => {
           path: pathDefault.proService,
           element: <ProSerVice />,
         },
-        {},
+        {
+          path: pathDefault.becomeASeller,
+          element: <BecomeASeller />,
+        },
       ],
     },
     {

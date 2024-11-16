@@ -18,4 +18,20 @@ export const congViecService = {
       },
     });
   },
+  // lấy công việc user đã đặt
+  getJobUser: (token) => {
+    return http.get("/thue-cong-viec/lay-danh-sach-da-thue", {
+      headers: {
+        token,
+      },
+    });
+  },
+  // delete job
+  deleteJob: (token, idJob) => {
+    return http.delete(`/thue-cong-viec/${idJob}`, {
+      headers: {
+        token,
+      },
+    });
+  },
 };

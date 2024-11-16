@@ -66,3 +66,9 @@
     padding: 0 5px;
     font-weight: 600;
 }
+
+.list_jobs_user .ant-modal-content .ant-modal-footer .ant-btn-primary {
+    //  style được cần phải thêm class ở modal của antd
+    display: none;
+
+}

@@ -15,4 +15,5 @@ export const pathDefault = {
   jobManagement: "job-management",
   uploadAdmin: "upload-admin",
   commentManagement: "comment-management",
+  becomeASeller: "become-a-seller",
 };

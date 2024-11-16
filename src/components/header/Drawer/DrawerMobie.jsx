@@ -122,7 +122,24 @@ const DrawerMobie = () => {
               General
             </p>
             <div className="items_drawer">
-              <Link to={"/"}>Home</Link>
+              <Link
+                onClick={() => {
+                  setOpen(false);
+                }}
+                to={"/"}
+              >
+                Home
+              </Link>
+            </div>
+            <div className="items_drawer">
+              <Link
+                onClick={() => {
+                  setOpen(false);
+                }}
+                to={pathDefault.becomeASeller}
+              >
+                Become a Seller
+              </Link>
             </div>
             <div className="items_drawer">
               <DropdownLang />

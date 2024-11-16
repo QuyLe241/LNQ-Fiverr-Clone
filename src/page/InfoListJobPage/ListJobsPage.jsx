@@ -37,7 +37,7 @@ const ListJobsPage = () => {
               //   console.log(item);
               return (
                 <div
-                  className="my-3 py-2 shadow-xl rounded-md hover:bg-slate-200 duration-300"
+                  className="my-3 pb-2 shadow-xl rounded-md hover:bg-slate-200 duration-300"
                   key={index}
                 >
                   <Link to={`${pathDefault.detail}?detail=${item.id}`}>
@@ -49,12 +49,12 @@ const ListJobsPage = () => {
                           alt=""
                         />
                       </div>
-                      <div className="name_jobs mt-1">
+                      <div className="name_jobs mt-1 px-1">
                         <span className="" style={{ color: "#404145" }}>
                           {item.tenCongViec}
                         </span>
                       </div>
-                      <div className="">
+                      <div className="px-2">
                         <div className="rate flex items-center mt-2">
                           <Star />
                           <span
@@ -67,7 +67,7 @@ const ListJobsPage = () => {
                         </div>
                         <div className="star"></div>
                       </div>
-                      <div className="price mt-1">
+                      <div className="price mt-1 px-2">
                         <span className="font-bold">
                           From{" "}
                           {item.giaTien.toLocaleString("en-US", {

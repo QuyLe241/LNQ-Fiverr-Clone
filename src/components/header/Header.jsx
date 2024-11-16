@@ -262,9 +262,12 @@ const Header = () => {
               <SetLanguage />
             </Modal>
             {/* modal */}
-            <a href="#" className="hover:text-green-500">
-              Become a seller
-            </a>
+            <Link
+              className="text-black hover:text-green-400"
+              to={pathDefault.becomeASeller}
+            >
+              Become a Seller
+            </Link>
             {/* text login */}
             {/* <LinkCustom
               content={"Sign in"}
