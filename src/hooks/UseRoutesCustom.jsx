@@ -29,6 +29,9 @@ const ManagerUser = React.lazy(() => import("../page/ManagerUser/ManagerUser"));
 const ListJobsPage = React.lazy(() =>
   import("../page/InfoListJobPage/ListJobsPage")
 );
+const ListTypeJobs = React.lazy(() =>
+  import("../components/TypeJobs/ListTypeJobs")
+);
 const ListJobPage = React.lazy(() => import("../page/ListJobPage/ListJobPage"));
 const Body = React.lazy(() => import("../components/Body/Body"));
 
@@ -59,6 +62,15 @@ const UseRoutesCustom = () => {
         {
           path: pathDefault.detail,
           element: <DeTailsJobs />,
+        },
+        {
+          path: pathDefault.listTypeJobs,
+          element: (
+            <Suspense fallback={<LoadingSpin />}>
+              {" "}
+              <ListTypeJobs />
+            </Suspense>
+          ),
         },
         {
           index: true,

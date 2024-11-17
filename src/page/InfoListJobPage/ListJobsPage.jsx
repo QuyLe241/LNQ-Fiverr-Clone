@@ -4,9 +4,12 @@ import { congViecService } from "../../services/congViec.service";
 import { Link } from "react-router-dom";
 import Star from "./Star";
 import { pathDefault } from "../../common/path";
+import HomeIconListJob from "./HomeIconListJob";
+import TypeJobs from "./TyepeJobs";
 
 const ListJobsPage = () => {
   const [listJobs, setListJobs] = useState([]);
+  const [listTypeJob, setListTypeJob] = useState([]);
   //   const listJobs = () => {};
   //   listJobs ,layCongViecTheoTen
   useEffect(() => {
@@ -24,11 +27,23 @@ const ListJobsPage = () => {
     <div>
       <div className="container px-1 mx-auto ">
         <div className="">
-          <div className=""></div>
-          <div className="">
-            <h2 className="" style={{ fontWeight: 700, fontSize: "25px" }}>
-              List Jobs
-            </h2>
+          <div className="container_type_jobs">
+            <TypeJobs />
+          </div>
+          <div className="flex items-center pt-3">
+            <div
+              style={{ borderRadius: "10px" }}
+              className="ml-2 p-1 hover:bg-slate-300"
+            >
+              <Link className="flex items-center" to={pathDefault.homePage}>
+                <HomeIconListJob width={"20px"} height={"20px"} />
+              </Link>
+            </div>
+            <div className="ml-2">
+              <h2 className="" style={{ fontWeight: 700, fontSize: "25px" }}>
+                <span style={{ color: "rgb(159 161 166)" }}>/</span> List Jobs
+              </h2>
+            </div>
           </div>
         </div>
         <div className="list_jobs">

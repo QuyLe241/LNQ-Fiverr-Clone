@@ -16,4 +16,5 @@ export const pathDefault = {
   uploadAdmin: "upload-admin",
   commentManagement: "comment-management",
   becomeASeller: "become-a-seller",
+  listTypeJobs: "/list-type-jobs",
 };

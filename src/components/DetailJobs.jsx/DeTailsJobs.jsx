@@ -81,6 +81,7 @@ const DeTailsJobs = () => {
         .then((res) => {
           // console.log(res.data);
           setListJob(res.data.content);
+          // console.log(searchParams);
         })
         .catch((err) => {
           // console.log(err);

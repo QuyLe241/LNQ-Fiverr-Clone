@@ -1,0 +1,21 @@
+
+.type_jobs__title {
+    position: relative;
+    // cursor: pointer; /* Thêm con trỏ để dễ nhận biết khi hover */
+}
+
+.type_jobs__title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0; /* Đặt width ban đầu là 0 */
+    background-color: rgb(27, 213, 142);
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hiệu ứng khi hover */
+.type_jobs__title:hover::before {
+    width: 100%;
+}

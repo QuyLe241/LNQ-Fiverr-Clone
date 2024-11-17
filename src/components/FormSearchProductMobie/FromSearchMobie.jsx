@@ -11,6 +11,7 @@ import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import useDebounce from "../../hooks/UseDebounce";
 import "./style.scss";
+import CloseIcon from "../FormSearchProduct/CloseIcon";
 
 const FromSearchMobie = () => {
   const isResponsive = useResponsive({
@@ -40,6 +41,15 @@ const FromSearchMobie = () => {
     navigate(`${pathDefault.listJob}?tenCongViec=${valueSearch}`);
     // console.log(valueSearch);
     setCheckDropdown(false);
+  };
+
+  //  clear valueSearch
+  const handleClearValueSearch = (event) => {
+    // event.preventDefault();
+    if (valueSearch) {
+      setValueSearch("");
+      setCheckDropdown(false);
+    }
   };
 
   //    debounce set thời gian gọi Api
@@ -118,6 +128,21 @@ const FromSearchMobie = () => {
               placeholder="Job search"
               className="flex-1 focus:border-none focus:outline-none"
             />
+            <div className="flex justify-center items-center pr-1">
+              <button
+                type="button"
+                style={{ visibility: valueSearch ? "visible" : "hidden" }}
+                onClick={() => {
+                  handleClearValueSearch();
+                }}
+              >
+                <CloseIcon
+                  width={"16px"}
+                  height={"16px"}
+                  fill={"rgb(128 131 135)"}
+                />
+              </button>
+            </div>
             <button
               type="submit"
               className=""

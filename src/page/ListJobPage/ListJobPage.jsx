@@ -3,6 +3,8 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { congViecService } from "../../services/congViec.service";
 import { pathDefault } from "../../common/path";
 import "./style.scss";
+import HomeIconListJob from "../InfoListJobPage/HomeIconListJob";
+import TypeJobs from "../InfoListJobPage/TyepeJobs";
 
 const ListJobPage = () => {
   const [searchParam, setSearchParam] = useSearchParams();
@@ -32,7 +34,28 @@ const ListJobPage = () => {
   const handleRender = () => {
     return (
       <div className="py-3">
-        <div className=""></div>
+        <div className="">
+          <div className="">
+            <div className="container_type_jobs">
+              <TypeJobs />
+            </div>
+            <div className="flex items-center pt-3">
+              <div
+                style={{ borderRadius: "10px" }}
+                className="ml-2 p-1 hover:bg-slate-300"
+              >
+                <Link className="flex items-center" to={pathDefault.homePage}>
+                  <HomeIconListJob width={"20px"} height={"20px"} />
+                </Link>
+              </div>
+              <div className="ml-2">
+                <h2 className="" style={{ fontWeight: 700, fontSize: "22px" }}>
+                  <span style={{ color: "rgb(159 161 166)" }}>/</span> List Jobs
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="">
           <p style={{ fontSize: "", fontWeight: 600 }} className="">
             Kết quả tìm kiếm về:{" "}

@@ -10,6 +10,15 @@ export const congViecService = {
   detailJob: (data) => {
     return http.get(`/cong-viec/lay-cong-viec-chi-tiet/${data}`);
   },
+  // lấy loại công việc
+  getTypeJob: () => {
+    return http.get("/loai-cong-viec");
+  },
+  // lấy công việc theo loại
+  getJobByType: (id) => {
+    return http.get(`/cong-viec/lay-cong-viec-theo-chi-tiet-loai/${id}`);
+  },
+
   //  đặt công việc
   setJob: (token, data) => {
     return http.post("/thue-cong-viec", data, {
