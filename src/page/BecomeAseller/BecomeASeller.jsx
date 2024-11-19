@@ -4,6 +4,7 @@ import BecomeImg1 from "../../assets/Img/becomeImg1.png";
 import BecomeImg2 from "../../assets/Img/becomeImg2.png";
 import BecomeImg3 from "../../assets/Img/becomeImg3.png";
 import { Link } from "react-router-dom";
+import { pathDefault } from "../../common/path";
 
 const BecomeASeller = () => {
   return (
@@ -70,6 +71,7 @@ const BecomeASeller = () => {
           </h3>
           <div className="flex justify-center items-center py-2">
             <Link
+              to={pathDefault.register}
               style={{ fontSize: "18px", fontWeight: 600 }}
               className="py-2 px-6 rounded-md text-white bg-green-500 hover:bg-green-400"
             >

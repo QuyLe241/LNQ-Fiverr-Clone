@@ -17,8 +17,12 @@ import checkImg from "../../assets/Img/checkImg.png";
 import proStories1 from "../../assets/Img/prostoriesImg1.png";
 import proStories2 from "../../assets/Img/prostoriesImg2.png";
 import proStories3 from "../../assets/Img/prostoriesImg3.png";
+import { useNavigate } from "react-router-dom";
+import { pathDefault } from "../../common/path";
 
 const ProSerVice = () => {
+  const navigate = useNavigate();
+
   var settings = {
     dots: false,
     infinite: true,
@@ -57,6 +61,7 @@ const ProSerVice = () => {
             </div>
             <div className="btn_responsive">
               <button
+                onClick={() => navigate(pathDefault.listJobsPage)}
                 className="text-black bg-white py-3 px-3 rounded-xl hover:bg-opacity-90"
                 style={{ fontWeight: 600 }}
               >
@@ -454,6 +459,7 @@ const ProSerVice = () => {
           </div>
           <div className="flex justify-center mt-10">
             <button
+              onClick={() => navigate(pathDefault.login)}
               className=" py-2 px-8 bg-white rounded-lg hover:opacity-90"
               style={{ fontWeight: 600, bottom: "" }}
             >

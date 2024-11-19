@@ -3,8 +3,11 @@ import ImgFiver from "./ImgFiver";
 import "./Intro.scss";
 import CarouselIntro from "./CarouselIntro";
 import ImgX1 from "../../../public/img/X1.png";
+import { useNavigate } from "react-router-dom";
+import { pathDefault } from "../../common/path";
 
 function BannerIntro() {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="my-32 colorbg py-8 rounded-lg flex items-center ">
@@ -33,7 +36,12 @@ function BannerIntro() {
           <div className="w-4/5 imgX1_mobie">
             <img className="" src={ImgX1} alt="" />
           </div>
-          <button className="px-5 py-2 bg-orange-600 text-white rounded-md hover:opacity-90">
+          <button
+            onClick={() => {
+              navigate(pathDefault.login);
+            }}
+            className="px-5 py-2 bg-orange-600 text-white rounded-md hover:opacity-90"
+          >
             Get started
           </button>
         </div>

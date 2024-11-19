@@ -43,4 +43,16 @@ export const congViecService = {
       },
     });
   },
+  // get review job
+  getReviewJob: (id) => {
+    return http.get(`/binh-luan/lay-binh-luan-theo-cong-viec/${id}`);
+  },
+  // review job
+  reviewJob: (token, data) => {
+    return http.post("/binh-luan", data, {
+      headers: {
+        token,
+      },
+    });
+  },
 };

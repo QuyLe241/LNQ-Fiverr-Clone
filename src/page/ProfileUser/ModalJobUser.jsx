@@ -80,7 +80,7 @@ const ModalJobUser = () => {
             const idJob = item.id;
             // console.log(idJob);
             return (
-              <div className="">
+              <div className="shadow-lg py-1">
                 <div className="py-2 flex">
                   <div className="w-1/4 flex items-center">
                     <img style={{}} src={item.congViec.hinhAnh} alt="" />
@@ -117,7 +117,10 @@ const ModalJobUser = () => {
                     </div>
                   </div>
                 </div>
-                <div className="btn_group flex justify-around items-center">
+                <div
+                  style={{ borderBottom: "" }}
+                  className="btn_group  flex justify-around items-center pb-3"
+                >
                   <div className="">
                     <Link
                       to={`${pathDefault.detail}?detail=${item.congViec.id}`}

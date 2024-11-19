@@ -376,11 +376,11 @@ const ModalEditInfo = () => {
         type=""
         onClick={showModal}
       >
-        Chỉnh sửa thông tin
+        Edit Information
       </Button>
       <Modal
         className="moadl_edit_infor"
-        title="Chỉnh sửa thông tin"
+        title="Edit Information"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}

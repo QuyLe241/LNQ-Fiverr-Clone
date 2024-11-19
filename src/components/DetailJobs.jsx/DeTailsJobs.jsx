@@ -21,6 +21,7 @@ import { useSelector } from "react-redux";
 import { NotificationContext } from "../../App";
 import { pathDefault } from "../../common/path";
 import ColumnGroup from "antd/es/table/ColumnGroup";
+import ReviewJob from "../ReviewJob/ReviewJob";
 
 const DeTailsJobs = () => {
   const navigate = useNavigate();
@@ -53,10 +54,7 @@ const DeTailsJobs = () => {
       const result = await congViecService.setJob(token, data);
       try {
         // console.log(result);
-        handleNotification(
-          "Đặt công việc thành công, kiểm tra tại Profile",
-          "success"
-        );
+        handleNotification("Success, Check in Profile", "success");
       } catch (err) {
         handleNotification("Đặt công việc thất bại, cần đăng nhập.", "error");
         // console.log(err);
@@ -954,9 +952,7 @@ const DeTailsJobs = () => {
                   </div>
 
                   <div className="review">
-                    <div className="">
-                      <h5></h5>
-                    </div>
+                    <ReviewJob />
                   </div>
                   <div className=""></div>
                   <div className=""></div>
