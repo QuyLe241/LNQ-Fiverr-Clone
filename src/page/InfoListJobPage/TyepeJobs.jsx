@@ -32,7 +32,7 @@ const TypeJobs = () => {
                   return isActive ? "text-green-500" : "";
                 }}
               >
-                <div className="type_jobs__title px-1 py-2 text-gray-500 hover:text-green-500">
+                <div className="type_jobs__title px-1 py-2 text-gray-500 hover:text-green-500 active:bg-green-100 duration-100">
                   {" "}
                   {item.tenLoaiCongViec}
                 </div>
