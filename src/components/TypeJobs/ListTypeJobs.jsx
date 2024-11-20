@@ -117,7 +117,7 @@ const ListTypeJobs = () => {
                 className="flex justify-center text-blue-500"
                 style={{ fontSize: "20px", fontWeight: 600 }}
               >
-                Không có công việc nào cả !
+                No Job !
               </span>
               <div className="flex justify-center py-3">
                 <Spin size="large" />
