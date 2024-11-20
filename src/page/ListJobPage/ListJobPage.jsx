@@ -58,7 +58,7 @@ const ListJobPage = () => {
         </div>
         <div className="">
           <p style={{ fontSize: "", fontWeight: 600 }} className="">
-            Kết quả tìm kiếm về:{" "}
+            Result for:{" "}
             <span style={{ fontSize: "18px" }} className="">
               {resultSearch}
             </span>

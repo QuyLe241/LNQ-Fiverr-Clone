@@ -13,12 +13,12 @@ const ListTypeJobs = () => {
 
   useEffect(() => {
     let id = searchParams.get("id");
-    console.log(id);
+    // console.log(id);
     const getTypeJobs = async () => {
       try {
         const res = await congViecService.getJobByType(id);
         setListTypeJobs(res.data.content);
-        console.log(res);
+        // console.log(res);
       } catch (error) {
         console.log(error);
       }

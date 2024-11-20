@@ -65,7 +65,7 @@ const LoginPage = () => {
         dispatch(setValueUser(result.data.content));
         //  chuyển hướng người dùng khi đăng nhập thành công
         handleNotification(
-          "Đăng nhập thành công bạn sẽ được chuyển đến trang chủ",
+          "Login success. Redirecting to the homepage in 2 seconds",
           "success"
         );
         setTimeout(() => {
@@ -80,16 +80,16 @@ const LoginPage = () => {
     validationSchema: yup.object({
       email: yup
         .string()
-        .resolve("Hợp lệ")
-        .required("Vui lòng không bỏ trống")
-        .email("Vui lòng nhập đúng định dạng email"),
+        .resolve("Valid")
+        .required("No empty")
+        .email("Email is not valid"),
       passWord: yup
         .string()
-        .resolve("Hợp lệ")
+        .resolve("Valid")
         .defined("Hợp lệ")
-        .required("Vui lòng không bỏ trống")
-        .min(6, "Nhập tối thiểu 6 ký tự")
-        .max(10, "Nhập tối đa 10 ký tự"),
+        .required("No empty")
+        .min(6, "Min 6 characters")
+        .max(10, "Max 10 characters"),
     }),
   });
 
@@ -109,12 +109,12 @@ const LoginPage = () => {
                 className="text-center mt-3"
                 style={{ fontSize: "25px", fontWeight: "700" }}
               >
-                ĐĂNG NHẬP
+                LOGIN USER
               </h1>
               <InputCustom
                 classWrapper="my-3"
                 contentLable={"Email"}
-                placeHolder={"Nhập email của bạn"}
+                placeHolder={"Email for login"}
                 name="email"
                 onChange={handleChange}
                 value={values.email}
@@ -140,8 +140,8 @@ const LoginPage = () => {
               /> */}
               <div className="relative password_set">
                 <InputCustom
-                  contentLable={"Mật khẩu"}
-                  placeHolder={"Nhập mật khẩu"}
+                  contentLable={"Password"}
+                  placeHolder={"Password"}
                   type={showPassword ? "text" : "password"}
                   name="passWord"
                   onChange={handleChange}
@@ -157,7 +157,7 @@ const LoginPage = () => {
                   className="absolute btn_showPassword"
                   onClick={() => setShowPassword(!showPassword)}
                 >
-                  {showPassword ? "Ẩn" : "Hiện"}
+                  {showPassword ? "Hidden" : "Show"}
                 </button>
               </div>
               <div className="mt-5">
@@ -166,14 +166,14 @@ const LoginPage = () => {
                     type="submit"
                     className="w-4/5 py-3 px-3 bg-green-600 text-white rounded-xl hover:bg-green-500"
                   >
-                    Đăng Nhập
+                    Login
                   </button>
                 </div>
                 <Link
                   to={pathDefault.register}
                   className="my-3 text-blue-500 hover:text-blue-400"
                 >
-                  Nhấn vào đây để đăng ký nếu bạn chưa có tài khoản.
+                  Click here to register if you do not have an account.
                 </Link>
                 <div className="">
                   <Link
@@ -181,7 +181,7 @@ const LoginPage = () => {
                     className="flex items-center my-3 text-blue-500 hover:text-blue-400"
                   >
                     <HomeInAdminLog width={"20px"} height={"20px"} />
-                    <span className="ml-1">Trở về trang chủ.</span>
+                    <span className="ml-1">Go back to the home page.</span>
                   </Link>
                 </div>
               </div>

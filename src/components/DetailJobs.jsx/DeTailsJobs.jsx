@@ -61,7 +61,7 @@ const DeTailsJobs = () => {
       }
     } else {
       // console.log("user null");
-      handleNotification("Vui lòng đăng nhập", "error");
+      handleNotification("You need login", "error");
       // console.log("user null");
     }
   };
@@ -72,7 +72,7 @@ const DeTailsJobs = () => {
     // console.log(idCongViec);
     if (user == null) {
       navigate(pathDefault.login);
-      handleNotification("Bạn cần đăng nhập để xem chi tiết", "error");
+      handleNotification("You need login ", "error");
     } else {
       congViecService
         .detailJob(idCongViec)

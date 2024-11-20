@@ -19,3 +19,30 @@
 .type_jobs__title:hover::before {
     width: 100%;
 }
+
+.container_typeJobs {
+    overflow-x: scroll;
+    // scrollbar-width: thin;
+    // scrollbar-color: #60e4a8 #78e8a7;
+}
+
+.container_typeJobs::-webkit-scrollbar {
+    height: 3px;
+    width: 20%;
+    // background-color: rgb(167, 240, 216);
+    // color: rgb(137, 240, 205);
+    border-radius: 5px;
+}
+.container_typeJobs::-webkit-scrollbar-thumb {
+        // background-color: #888;
+        background: #36e794; /* Màu thanh trượt */
+        // border: 3px solid transparent; /* Tạo khoảng cách bên trong */
+        border-radius: 5px; /* Bo góc thanh trượt */
+        background-clip: padding-box; /* Giữ khoảng cách viền */    
+}
+.container_typeJobs::-webkit-scrollbar-track {
+    // background-color: #555;
+    background: linear-gradient(to bottom, #f1f1f1, #e0e0e0); /* Gradient nền */
+    border: 1px solid #ccc; /* Viền của nền */
+    border-radius: 10px; /* Bo góc */
+}

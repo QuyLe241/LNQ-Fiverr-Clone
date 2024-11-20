@@ -339,13 +339,13 @@ const ModalEditInfo = () => {
           values
         );
         console.log(res);
-        handleNotification("Chỉnh sửa thành công", "success");
+        handleNotification("Edit succes", "success");
         setTimeout(() => {
           window.location.reload();
         }, 500);
       } catch (err) {
         console.log(err);
-        handleNotification("Chỉnh sửa thất bại", "error");
+        handleNotification("Edit fail", "error");
       }
     },
   });

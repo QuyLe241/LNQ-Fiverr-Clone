@@ -280,7 +280,7 @@ const ProfileUser = () => {
 
     try {
       const res = await nguoiDungService.uploadAvatar(formData, user.token);
-      handleNotification("Upload avatar thành công", "success");
+      handleNotification("Upload avatar success", "success");
 
       // Cập nhật avatar mới trong state
       setInfoUser((prevInfoUser) => ({
@@ -289,7 +289,7 @@ const ProfileUser = () => {
       }));
     } catch (err) {
       console.error("Lỗi khi upload avatar:", err);
-      handleNotification("Upload avatar thất bại", "error");
+      handleNotification("Upload avatar fail", "error");
     }
   };
 
@@ -514,6 +514,7 @@ const ProfileUser = () => {
             </div>
           )}
         </div>
+        <div className="Jobs_review"></div>
       </div>
     </div>
   );

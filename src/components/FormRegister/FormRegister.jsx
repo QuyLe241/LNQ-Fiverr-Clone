@@ -63,7 +63,7 @@ const FormRegister = () => {
           console.log(res);
           //    thông báo cho người dùng khi tạo tài khoản thành công
           handleNotification(
-            "Bạn đã tạo tài khoản thành công . Bạn đang được chuyển hướng đến trang đăng nhập",
+            "You have successfully registered. Redirecting to the login page",
             "success"
           );
           //    chuyển hướng người dùng
@@ -73,7 +73,7 @@ const FormRegister = () => {
         })
         .catch((err) => {
           console.log(err);
-          handleNotification(err.response.data.content, "error");
+          handleNotification("Register fail", "error");
           // setTimeout(() => {}, 1000);
         });
     },
@@ -81,27 +81,24 @@ const FormRegister = () => {
       name: yup
         .string()
         .required(notiValidation.empty)
-        .matches(/^[A-Za-zÀ-ỹà-ỹ\s]+$/, "Vui lòng nhập không có số"),
-      email: yup
-        .string()
-        .email("Nhập đúng định dạng email")
-        .required("Vui lòng không bỏ trống"),
+        .matches(/^[A-Za-zÀ-ỹà-ỹ\s]+$/, "Not characters Number"),
+      email: yup.string().email("Email not valid").required("Email not empty"),
       passWord: yup
         .string()
         .matches(
           /^(?=.*[A-Z])(?=.*\d).+$/,
-          "Vui lòng nhập ít nhất một chữ cái thường, in hoa và một chữ số"
+          "Password must contain at least one uppercase letter,special characters and one number"
         )
-        .required("Vui lòng không bỏ trống"),
+        .required("Password not empty"),
       phone: yup
         .string()
         .matches(
           /^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$/,
-          "Vui lòng nhập đúng số điện thoại"
+          "Phone number is not valid"
         )
-        .required("Vui lòng không bỏ trống"),
-      birthday: yup.string().required("Vui lòng không bỏ trống"),
-      gender: yup.string().required("Vui lòng không bỏ trống"),
+        .required("Phone number not empty"),
+      birthday: yup.string().required("Birthday not empty"),
+      gender: yup.string().required("Gender not empty"),
     }),
   });
   return (
@@ -110,15 +107,15 @@ const FormRegister = () => {
         className="text-center pt-2"
         style={{ fontSize: "26px", fontWeight: "700" }}
       >
-        Đăng ký
+        Register Page
       </h1>
       <form action="" onSubmit={handleSubmit}>
         {/*       flex-wrap : khi các phần tử vượt quá 100% sẽ tự động xuông dòng */}
         <div className="flex flex-wrap">
           <InputCustom
-            contentLable={"Họ và Tên"}
+            contentLable={"Your name"}
             name={"name"}
-            placeHolder={"Nhập tên của bạn"}
+            placeHolder={"Enter your name"}
             classWrapper={"w-full xl:w-1/2 p-3"}
             value={values.name}
             onBlur={handleBlur}
@@ -130,7 +127,7 @@ const FormRegister = () => {
           <InputCustom
             contentLable={"Email"}
             name={"email"}
-            placeHolder={"Nhập email của bạn"}
+            placeHolder={"abc@gmil.com"}
             classWrapper={"w-full xl:w-1/2 p-3"}
             value={values.email}
             onBlur={handleBlur}
@@ -155,9 +152,9 @@ const FormRegister = () => {
           /> */}
           <div className="relative password_set_register w-full">
             <InputCustom
-              contentLable={"Mật khẩu"}
+              contentLable={"Password"}
               classWrapper={"w-full p-3"}
-              placeHolder={"Nhập mật khẩu"}
+              placeHolder={"Password"}
               type={showPassword ? "text" : "password"}
               name="passWord"
               onChange={handleChange}
@@ -173,15 +170,15 @@ const FormRegister = () => {
               className="absolute btn_showPassword"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? "Ẩn" : "Hiện"}
+              {showPassword ? "Hidden" : "Show"}
             </button>
           </div>
           {/* test */}
           {/* test */}
           <InputCustom
-            contentLable={"Số điện thoại"}
+            contentLable={"Phone"}
             name={"phone"}
-            placeHolder={"Nhập số điện thoại của bạn"}
+            placeHolder={"Enter your phone number"}
             classWrapper={"w-full p-3"}
             value={values.phone}
             onBlur={handleBlur}
@@ -193,7 +190,7 @@ const FormRegister = () => {
           />
           <div className="w-1/2 p-3">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-              Ngày sinh
+              Date of birth
             </label>
             <DatePicker
               className="w-full"
@@ -209,7 +206,7 @@ const FormRegister = () => {
           <div className="w-1/2 p-3">
             <div>
               <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Giới tính
+                Gender
               </label>
               <select
                 name="gender"
@@ -220,7 +217,7 @@ const FormRegister = () => {
                 value={values.gender}
                 onChange={handleChange}
               >
-                <option value="">Chọn giới tính</option>
+                <option value="">Gender</option>
                 <option value="US">Nam</option>
                 <option value="CA">Nữ</option>
               </select>
@@ -236,16 +233,16 @@ const FormRegister = () => {
                 onSubmit={(e) => {
                   e.target.value;
                 }}
-                className="bg-black text-white rounded-lg w-full py-3 px-6 hover:bg-zinc-900"
+                className="bg-slate-900 text-white rounded-lg w-full py-3 px-6 hover:bg-black"
               >
-                Đăng ký
+                Sign Up
               </button>
             </div>
             <Link
               to={pathDefault.login}
               className="my-3 text-blue-500 hover:text-blue-400"
             >
-              Nhấn vào đây để đăng nhập nếu bạn đã có tài khoản.
+              Click here to login if you already have an account.
             </Link>
             <div className="">
               <Link
@@ -253,7 +250,7 @@ const FormRegister = () => {
                 className="flex items-center my-3 text-blue-500 hover:text-blue-400"
               >
                 <HomeInAdminLog width={"20px"} height={"20px"} />
-                <span className="ml-1">Trở về trang chủ.</span>
+                <span className="ml-1">Go back to the home page.</span>
               </Link>
             </div>
           </div>

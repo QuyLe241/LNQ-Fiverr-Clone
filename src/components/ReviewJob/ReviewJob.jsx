@@ -50,7 +50,7 @@ const ReviewJob = () => {
         noiDung: "",
         saoBinhLuan: 5, // Giá trị mặc định
       });
-      handleNotification("Review success, Check in Profile", "success");
+      handleNotification("Review success", "success");
     } catch (error) {
       console.log(error);
       handleNotification("Review fail", "error");
