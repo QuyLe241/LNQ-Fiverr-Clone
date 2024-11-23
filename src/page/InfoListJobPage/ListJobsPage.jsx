@@ -250,7 +250,7 @@ const ListJobsPage = () => {
           <div className="container_type_jobs">
             <TypeJobs />
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center content_top_env">
             <div className="flex items-center pt-3">
               <div
                 style={{ borderRadius: "10px" }}
@@ -271,7 +271,7 @@ const ListJobsPage = () => {
               <Button
                 style={{ border: "2px black solid", fontWeight: 600 }}
                 type=""
-                className="hover:text-green-500"
+                className=" btn_modal_filter"
                 onClick={showModal}
               >
                 <FilterIcon width={"16px"} height={"16px"} fill={"black"} />
@@ -286,6 +286,9 @@ const ListJobsPage = () => {
               >
                 <div className="">
                   <form action="">
+                    <div className="">
+                      <span style={{ fontWeight: 600 }}>Price</span>
+                    </div>
                     <Slider
                       range
                       min={0}
@@ -306,7 +309,7 @@ const ListJobsPage = () => {
                       </button>
                       <button
                         type="button"
-                        className="py-1 px-5 border-2 border-green-500 text-green-600 duration-200 rounded-xl hover:bg-green-500 hover:text-white"
+                        className="btn_handle_filter py-1 px-5 border-2 border-green-500 text-green-600 duration-200 rounded-xl hover:bg-green-500 hover:text-white"
                         onClick={handleOk}
                       >
                         Filter

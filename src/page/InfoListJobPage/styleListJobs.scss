@@ -47,3 +47,11 @@
 .modal_filter .ant-modal-footer {
     display: none;
 }
+
+.content_top_env .filter_jobs .btn_modal_filter {
+    &:hover {
+        border: 3px solid black;
+        color: rgb(31, 222, 76);
+        font-weight: 700;
+    }
+}
