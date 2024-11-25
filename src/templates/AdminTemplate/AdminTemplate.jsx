@@ -65,11 +65,6 @@ const AdminTemplate = () => {
                 <NavLink to={pathDefault.adminTemplate}>Người dùng</NavLink>
               ),
             },
-            // {
-            //   key: "2",
-            //   icon: <PlusCircleOutlined />,
-            //   label: <Link to={pathDefault.createUser}>Tạo người dùng</Link>,
-            // },
             {
               key: `/admin/${pathDefault.createUser}`,
               icon: <PlusCircleOutlined />,
@@ -77,18 +72,18 @@ const AdminTemplate = () => {
                 <NavLink to={pathDefault.createUser}>Tạo người dùng</NavLink>
               ),
             },
-            {
-              key: `/admin/${pathDefault.jobManagement}`,
-              icon: <VideoCameraOutlined />,
-              label: (
-                <NavLink to={pathDefault.jobManagement}>Công việc</NavLink>
-              ),
-            },
-            {
-              key: `/admin/${pathDefault.uploadAdmin}`,
-              icon: <UploadOutlined />,
-              label: <NavLink to={pathDefault.uploadAdmin}>Upload</NavLink>,
-            },
+            // {
+            //   key: `/admin/${pathDefault.jobManagement}`,
+            //   icon: <VideoCameraOutlined />,
+            //   label: (
+            //     <NavLink to={pathDefault.jobManagement}>Công việc</NavLink>
+            //   ),
+            // },
+            // {
+            //   key: `/admin/${pathDefault.uploadAdmin}`,
+            //   icon: <UploadOutlined />,
+            //   label: <NavLink to={pathDefault.uploadAdmin}>Upload</NavLink>,
+            // },
             {
               key: `/admin/${pathDefault.commentManagement}`,
               icon: <CommentOutlined />,

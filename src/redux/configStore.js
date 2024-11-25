@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./authSlice";
 import nguoiDungSlice from "./nguoiDungSlice";
 import jobUserSlice from "./jobUserSlice";
-// import profileUserSlice from "./profileUserSlice";
+import commentsSlice from "./commentsSlice";
 import ReviewJob from "./reviewJob";
 
 export const store = configureStore({
@@ -11,5 +11,6 @@ export const store = configureStore({
     nguoiDungSlice,
     jobUserSlice,
     ReviewJob,
+    commentsSlice,
   },
 });
