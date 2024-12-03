@@ -35,11 +35,20 @@ const FormSearchProduct = () => {
   //    Sử dụng state để quản lý search
   const [valueSearch, setValueSearch] = useState("");
 
+  // xử lý valueSearch thành chuỗi khi truyền lên url
+  const [valueSearchUrl, setValueSearchUrl] = useState("");
+
   const handleSubmit = (event) => {
-    //    tránh trường hợp reload trang
+    // Avoid page reload
     event.preventDefault();
-    navigate(`${pathDefault.listJob}?tenCongViec=${valueSearch}`);
-    // console.log(valueSearch);
+
+    // Encode the search term
+    const encodedSearchTerm = encodeURIComponent(valueSearch);
+
+    // Navigate to the search results page with the encoded search term
+    navigate(`${pathDefault.listJob}?tenCongViec=${encodedSearchTerm}`);
+
+    // Close the dropdown
     setCheckDropdown(false);
   };
 
@@ -53,7 +62,7 @@ const FormSearchProduct = () => {
   };
 
   //    debounce set thời gian gọi Api
-  const debounceValue = useDebounce(valueSearch, 1000);
+  const debounceValue = useDebounce(valueSearch, 500);
 
   // useEffect xử lý để gọi Api và set thời gian gọi, xử lý dựa trên debounceValue
   useEffect(() => {
