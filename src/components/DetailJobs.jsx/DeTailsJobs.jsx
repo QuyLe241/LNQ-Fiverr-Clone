@@ -70,21 +70,33 @@ const DeTailsJobs = () => {
   useEffect(() => {
     const idCongViec = searchParams.get("detail");
     // console.log(idCongViec);
-    if (user == null) {
-      navigate(pathDefault.login);
-      handleNotification("You need login ", "error");
-    } else {
-      congViecService
-        .detailJob(idCongViec)
-        .then((res) => {
-          // console.log(res.data);
-          setListJob(res.data.content);
-          // console.log(searchParams);
-        })
-        .catch((err) => {
-          // console.log(err);
-        });
-    }
+    // if (user == null) {
+    //   // navigate(pathDefault.login);
+    //   handleNotification("You need login ", "error");
+    // } else {
+    //   congViecService
+    //     .detailJob(idCongViec)
+    //     .then((res) => {
+    //       // console.log(res.data);
+    //       setListJob(res.data.content);
+    //       // console.log(searchParams);
+    //     })
+    //     .catch((err) => {
+    //       // console.log(err);
+    //     });
+    // }
+    //
+    // test setJob
+    congViecService
+      .detailJob(idCongViec)
+      .then((res) => {
+        // console.log(res.data);
+        setListJob(res.data.content);
+        // console.log(searchParams);
+      })
+      .catch((err) => {
+        // console.log(err);
+      });
   }, [searchParams]);
 
   //  Tabs
@@ -210,7 +222,13 @@ const DeTailsJobs = () => {
                   <div className="flex justify-center">
                     <button
                       onClick={() => {
-                        handleSetJobs();
+                        // handleSetJobs();
+                        if (user == null) {
+                          handleNotification("You need login", "error");
+                          // handleSetJobs();
+                        } else {
+                          handleSetJobs();
+                        }
                       }}
                       style={{ border: "1px black solid" }}
                       className="flex items-center justify-center bg-slate-800 text-white w-3/4 py-2 rounded-lg font-bold hover:bg-black duration-500"
@@ -358,7 +376,13 @@ const DeTailsJobs = () => {
                   <div className="flex justify-center">
                     <button
                       onClick={() => {
-                        handleSetJobs();
+                        // handleSetJobs();
+                        if (user == null) {
+                          handleNotification("You need login", "error");
+                          // handleSetJobs();
+                        } else {
+                          handleSetJobs();
+                        }
                       }}
                       style={{ border: "1px black solid" }}
                       className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
@@ -506,7 +530,13 @@ const DeTailsJobs = () => {
                   <div className="flex justify-center">
                     <button
                       onClick={() => {
-                        handleSetJobs();
+                        // handleSetJobs();
+                        if (user == null) {
+                          handleNotification("You need login", "error");
+                          // handleSetJobs();
+                        } else {
+                          handleSetJobs();
+                        }
                       }}
                       style={{ border: "1px black solid" }}
                       className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
